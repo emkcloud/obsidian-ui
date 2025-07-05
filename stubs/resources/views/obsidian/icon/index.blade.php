@@ -1,12 +1,9 @@
-{{-- Credit: Heroicons (https://heroicons.com) --}}
+{{-- setting --}}
 
-@props([
-    'icon' => null,
-    'name' => null,
-])
+@props(['name' => null,'set' => null])
 
-@php
-$icon = $name ?? $icon;
-@endphp
+@php $icon = sprintf('obsidian::icon.%s.%s',$set,$name); @endphp
 
-<flux:delegate-component :component="'icon.' . $icon">{{ $slot }}</flux:delegate-component>
+{{-- output --}}
+
+<x-dynamic-component :component="$icon" {{ $attributes }}>{{ $slot }}</x-dynamic-component>

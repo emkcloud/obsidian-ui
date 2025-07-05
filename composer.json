@@ -35,7 +35,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Emkcloud\\ObsidianUi\\Providers\\ObsidianUiServiceProvider"
+                "Emkcloud\\ObsidianUI\\Providers\\PackageServiceProvider"
             ]
         }
     },

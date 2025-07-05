@@ -8,7 +8,7 @@ use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
-class ObsidianUiServiceProvider extends ServiceProvider
+class PackageServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {

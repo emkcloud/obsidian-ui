@@ -19,3 +19,7 @@ Run the following command from your project's root directory:
 ```bash
 composer require emkcloud/obsidian-ui
 ```
+
+## License
+
+The MIT License (MIT). Please see the package [License file](LICENSE) for more information.

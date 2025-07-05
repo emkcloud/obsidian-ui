@@ -8,9 +8,9 @@ Because of this licensing restriction, Flex UI PRO is not suitable for an open-s
 
 Odsidian UI requires the following:
 
-* Laravel v12.0+
-* Livewire v3.5.19+
-* Tailwind CSS v4.0+
+* Laravel 12.0+
+* Livewire 3.5.19+
+* Tailwind CSS 4.0+
 
 ## Installation
 

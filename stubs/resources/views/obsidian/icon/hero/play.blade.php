@@ -1,42 +1,30 @@
 {{-- Credit: Heroicons (https://heroicons.com) --}}
 
-@props(['variant' => 'outline'])
+@props(['size' => 'standard'])
 
-@php $classes = ObsidianUI::classes('shrink-0')->add(match($variant)
+@php $classes = ObsidianUI::classes('shrink-0')->add(match($size)
 {
-    'outline' => '[:where(&)]:size-6',
-    'solid'   => '[:where(&)]:size-6',
-    'mini'    => '[:where(&)]:size-5',
-    'micro'   => '[:where(&)]:size-4',
+    'large'    => '[:where(&)]:size-8 [:where(&)]:stroke-[1.5]',
+    'standard' => '[:where(&)]:size-6 [:where(&)]:stroke-[2.0]',
+    'small'    => '[:where(&)]:size-5 [:where(&)]:stroke-[2.4]',
+    'micro'    => '[:where(&)]:size-4 [:where(&)]:stroke-[3.0]',
+    default    => '[:where(&)]:size-6 [:where(&)]:stroke-[2.0]',
 });
 @endphp
 
 {{-- output --}}
 
-@switch($variant)
-
-@case('outline')
-<svg {{ $attributes->class($classes) }} data-obsidian-ui-icon xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
+<svg xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    stroke-width="1.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    data-obsidian-ui-icon
+    {{ $attributes->class($classes) }}
+>
     <path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.347a1.125 1.125 0 0 1 0 1.972l-11.54 6.347a1.125 1.125 0 0 1-1.667-.986V5.653Z"/>
 </svg>
-@break
-
-@case('solid')
-<svg {{ $attributes->class($classes) }} data-obsidian-ui-icon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon">
-    <path fill-rule="evenodd" d="M4.5 5.653c0-1.427 1.529-2.33 2.779-1.643l11.54 6.347c1.295.712 1.295 2.573 0 3.286L7.28 19.99c-1.25.687-2.779-.217-2.779-1.643V5.653Z" clip-rule="evenodd"/>
-</svg>
-@break
-
-@case('mini')
-<svg {{ $attributes->class($classes) }} data-obsidian-ui-icon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-    <path d="M6.3 2.84A1.5 1.5 0 0 0 4 4.11v11.78a1.5 1.5 0 0 0 2.3 1.27l9.344-5.891a1.5 1.5 0 0 0 0-2.538L6.3 2.841Z"/>
-</svg>
-@break
-
-@case('micro')
-<svg {{ $attributes->class($classes) }} data-obsidian-ui-icon xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" data-slot="icon">
-    <path d="M3 3.732a1.5 1.5 0 0 1 2.305-1.265l6.706 4.267a1.5 1.5 0 0 1 0 2.531l-6.706 4.268A1.5 1.5 0 0 1 3 12.267V3.732Z"/>
-</svg>
-@break
-
-@endswitch

@@ -12,11 +12,11 @@ To use them, simply use the Blade directive `<x-obsidian::icon>`
 
 Where you need to specify the set name and the icon name in the following format:
 
-```php
+```blade
 <x-obsidian::icon.set.name>
 ```
 
-```php
+```blade
 <x-obsidian::icon.base.loading /> 
 <x-obsidian::icon.hero.check-circle /> 
 <x-obsidian::icon.lucide.baggage-claim />
@@ -24,11 +24,11 @@ Where you need to specify the set name and the icon name in the following format
 
 Alternative method for set name and the icon name in the following format:
 
-```php
+```blade
 <x-obsidian::icon set="set" name="name">
 ```
 
-```php
+```blade
 <x-obsidian::icon set="base" name="loading" /> 
 <x-obsidian::icon set="hero" name="check-circle" /> 
 <x-obsidian::icon set="lucide" name="baggage-claim" />
@@ -38,7 +38,7 @@ Alternative method for set name and the icon name in the following format:
 
 There are several predefined standard sizes that can be specified using the `size` property.
 
-```php
+```blade
 <x-obsidian::icon.lucide.airplay/>                 <!-- 24 px -->
 <x-obsidian::icon.lucide.airplay size="large"/>    <!-- 32 px -->
 <x-obsidian::icon.lucide.airplay size="standard"/> <!-- 24 px -->
@@ -48,7 +48,7 @@ There are several predefined standard sizes that can be specified using the `siz
 
 If you need a custom size, use the [size utility classes](https://tailwindcss.com/docs/width) from Tailwind CSS.
 
-```php
+```blade
 <x-obsidian::icon.lucide.audio-waveform class="size-10"/>
 <x-obsidian::icon.lucide.audio-waveform class="size-12"/>
 <x-obsidian::icon.lucide.audio-waveform class="size-14"/>
@@ -58,7 +58,7 @@ If you need a custom size, use the [size utility classes](https://tailwindcss.co
 
 You can customize the color of an icon using Tailwind's [text color utilities](https://tailwindcss.com/docs/color)
 
-```php
+```blade
 <x-obsidian::icon.hero.beaker class="text-black dark:text-white"/>
 <x-obsidian::icon.hero.bug-ant class="text-amber-500 dark:text-amber-300"/>
 <x-obsidian::icon.hero.circle-stack class="text-teal-500 dark:text-transparent"/>

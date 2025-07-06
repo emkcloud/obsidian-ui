@@ -66,7 +66,7 @@ You can customize the color of an icon using utilities [Tailwind's colors](https
 
 ## Special
 
-There are special icons in the `base` set dedicated to specific operational states such as loading, edit, etc.
+There are special icons in the `base set` dedicated to specific operational states such as loading, edit, etc.
 
 ```blade
 <x-obsidian::icon.base.404/>

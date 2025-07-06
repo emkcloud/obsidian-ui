@@ -17,13 +17,18 @@ Where you need to specify the set name and the icon name in the following format
 ```
 
 ```blade
-<x-obsidian::icon.hero.check-circle /> 
-<x-obsidian::icon.lucide.baggage-claim />
+<x-obsidian::icon.hero.check-circle/>
+<x-obsidian::icon.hero.bell-alert/>
+<x-obsidian::icon.lucide.baggage-claim/>
 ```
 
 ><picture>
 >  <source media="(prefers-color-scheme: dark)" srcset="../images/check-circle-white.svg">
 >  <img src="../images/check-circle-black.svg">
+></picture>&nbsp;
+><picture>
+>  <source media="(prefers-color-scheme: dark)" srcset="../images/bell-alert-white.svg">
+>  <img src="../images/bell-alert-black.svg">
 ></picture>&nbsp;
 ><picture>
 >  <source media="(prefers-color-scheme: dark)" srcset="../images/baggage-claim-white.svg">
@@ -46,12 +51,12 @@ Alternative method for set name and the icon name in the following format:
 There are several predefined sizes that can be specified using the `size` property.
 
 ```blade
-<x-obsidian::icon.lucide.airplay/>                 <!-- 24 px -->
 <x-obsidian::icon.lucide.airplay size="micro"/>    <!-- 16 px -->
 <x-obsidian::icon.lucide.airplay size="small"/>    <!-- 20 px -->
 <x-obsidian::icon.lucide.airplay size="standard"/> <!-- 24 px -->
 <x-obsidian::icon.lucide.airplay size="large"/>    <!-- 32 px -->
 <x-obsidian::icon.lucide.airplay size="full"/>     <!-- 100 % -->
+<x-obsidian::icon.lucide.airplay/>                 <!-- 24 px -->
 ```
 ><picture>
 >  <source media="(prefers-color-scheme: dark)" srcset="../images/airplay-16-white.svg">
@@ -79,16 +84,16 @@ If you need a custom size, use the [size utility classes](https://tailwindcss.co
 ```
 
 ><picture>
->  <source media="(prefers-color-scheme: dark)" srcset="../images/waveform-28-white1.svg">
->  <img src="../images/waveform-28-black1.svg">
+>  <source media="(prefers-color-scheme: dark)" srcset="../images/waveform-28-white.svg">
+>  <img src="../images/waveform-28-black.svg">
 ></picture>&nbsp;
 ><picture>
->  <source media="(prefers-color-scheme: dark)" srcset="../images/waveform-32-white1.svg">
->  <img src="../images/waveform-32-black1.svg">
+>  <source media="(prefers-color-scheme: dark)" srcset="../images/waveform-32-white.svg">
+>  <img src="../images/waveform-32-black.svg">
 ></picture>&nbsp;
 ><picture>
->  <source media="(prefers-color-scheme: dark)" srcset="../images/waveform-36-white1.svg">
->  <img src="../images/waveform-36-black1.svg">
+>  <source media="(prefers-color-scheme: dark)" srcset="../images/waveform-36-white.svg">
+>  <img src="../images/waveform-36-black.svg">
 ></picture>
 
 ## Colors

@@ -114,7 +114,7 @@ You can customize the color of an icon using utilities [Tailwind's colors](https
 <x-obsidian::icon.hero.bug-ant class="text-rose-700 dark:text-rose-700"/>
 ```
 
-><picture style="vertical-align:middle">
+><picture>
 >  <source media="(prefers-color-scheme: dark)" srcset="../images/bug-ant-white.svg">
 >  <img src="../images/bug-ant-black.svg">
 ></picture>&nbsp;
@@ -158,6 +158,11 @@ You can customize the animation icon using utilities [Tailwind's animations](htt
 <x-obsidian::icon.hero.academic-cap class="animate-ping"/>
 <x-obsidian::icon.hero.academic-cap class="animate-pulse"/>
 ```
+
+><picture>
+>  <source media="(prefers-color-scheme: dark)" srcset="../images/star-animate-white1.svg">
+>  <img src="../images/star-animate-black1.svg">
+></picture>&nbsp;
 
 ## Naming
 

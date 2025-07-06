@@ -2,7 +2,7 @@
 
 The package provides several icon sets ready to use right after installation, as well as others that can be added directly by developers. The sets available upon installation are the following:
 
-* [Package: Common icon for loading, edit etc](https://github.com/emkcloud/obsidian-ui)
+* [Package: Common icon for loading, actions, edit, delete etc](https://github.com/emkcloud/obsidian-ui)
 * [Lucide: Beautiful & consistent icons](https://lucide.dev/)
 * [Heroicons: Beautiful hand-crafted SVG icons by Tailwind CSS](https://heroicons.com/)
 

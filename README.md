@@ -34,6 +34,9 @@ The following components are included in the package:
 
 ## Other Resources
 
+* [Heroicons: Beautiful hand-crafted SVG icons](https://heroicons.com/)
+* [Lucide: Beautiful & consistent icons](https://lucide.dev/)
+
 ## License
 
 The MIT License (MIT). Please see the package [License file](LICENSE) for more information.

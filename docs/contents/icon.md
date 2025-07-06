@@ -6,7 +6,7 @@ The package provides several icon sets ready to use right after installation, as
 * [Lucide: Beautiful & consistent icons](https://lucide.dev/)
 * [Heroicons: Beautiful hand-crafted SVG icons by Tailwind CSS](https://heroicons.com/)
 
-To use them, simply use the Blade directive `<x-obsidian::icon>`
+To use them, simply use the Blade directive present in the package `<x-obsidian::icon>`
 
 ## Usage
 

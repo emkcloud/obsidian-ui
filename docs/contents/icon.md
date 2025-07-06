@@ -36,7 +36,7 @@ Alternative method for set name and the icon name in the following format:
 
 ## Sizes
 
-There are several predefined standard sizes that can be specified using the `size` property.
+There are several predefined sizes that can be specified using the `size` property.
 
 ```blade
 <x-obsidian::icon.lucide.airplay/>                 <!-- 24 px -->

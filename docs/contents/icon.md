@@ -57,17 +57,17 @@ There are several predefined sizes that can be specified using the `size` proper
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../images/airplay-16-white.svg">
   <img src="../images/airplay-16-black.svg">
-</picture>
+</picture>&nbsp;
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../images/airplay-20-white.svg">
   <img src="../images/airplay-20-black.svg">
-</picture>
+</picture>&nbsp;
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../images/airplay-24-white.svg">
   <img src="../images/airplay-24-black.svg">
-</picture>
+</picture>&nbsp;
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../images/airplay-32-white.svg">
@@ -84,7 +84,7 @@ If you need a custom size, use the [size utility classes](https://tailwindcss.co
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../images/waveform-28-white1.svg">
-  <img src="../images/waveform-28-black1.svg" style="margin-right:10px">
+  <img src="../images/waveform-28-black1.svg">
 </picture>&nbsp;
 
 <picture>

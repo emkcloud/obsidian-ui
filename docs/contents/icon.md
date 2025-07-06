@@ -31,6 +31,7 @@ Where you need to specify the set name and the icon name in the following format
 >  <source media="(prefers-color-scheme: dark)" srcset="../images/bell-alert-white.svg">
 >  <img src="../images/bell-alert-black.svg">
 ></picture>&nbsp;
+><picture>
 >  <source media="(prefers-color-scheme: dark)" srcset="../images/atom-white.svg">
 >  <img src="../images/atom-black.svg">
 ></picture>&nbsp;

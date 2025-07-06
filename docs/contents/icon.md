@@ -56,7 +56,7 @@ If you need a custom size, use the [size utility classes](https://tailwindcss.co
 
 ## Color
 
-You can customize the color of an icon using [Tailwind's color utilities](https://tailwindcss.com/docs/color)
+You can customize the color of an icon using utilities [Tailwind's colors](https://tailwindcss.com/docs/color)
 
 ```blade
 <x-obsidian::icon.hero.beaker class="text-black dark:text-white"/>
@@ -74,7 +74,7 @@ There are special icons in the `base` set dedicated to specific operational stat
 
 ## Animation
 
-You can customize the animation icon using [Tailwind's animations](https://tailwindcss.com/docs/animation#adding-a-spin-animation)
+You can customize the animation icon using utilities [Tailwind's animations](https://tailwindcss.com/docs/animation#adding-a-spin-animation)
 
 ```blade
 <x-obsidian::icon.hero.academic-cap class="animate-spin"/>

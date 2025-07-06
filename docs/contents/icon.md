@@ -73,5 +73,37 @@ For add new icons, you can create the Blade files in the `resources/views/obsidi
 ```php
 <x-obsidian::icon.set-name.icon-name/>
 <x-obsidian::icon.set-name.icon-name size="micro"/>
-<x-obsidian::icon set="set-name" name="icon-name" size="micro"/>
+<x-obsidian::icon set="set-name" name="icon-name" size="small"/>
 ```
+
+You can simply paste SVG code directly into the Blade file, however we recommend using the following template structure to ensure compatibility with other components:
+
+```
+@props(['size' => 'standard'])
+
+@php $classes = ObsidianUI::classes('shrink-0')->add(match($size)
+{
+    'large'    => '[:where(&)]:size-8 [:where(&)]:stroke-[1.5]',
+    'standard' => '[:where(&)]:size-6 [:where(&)]:stroke-[2.0]',
+    'small'    => '[:where(&)]:size-5 [:where(&)]:stroke-[2.4]',
+    'micro'    => '[:where(&)]:size-4 [:where(&)]:stroke-[3.0]',
+    default    => '[:where(&)]:size-6 [:where(&)]:stroke-[2.0]',
+});
+@endphp
+
+<svg xmlns="http://www.w3.org/2000/svg"
+    width="24"
+    height="24"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    stroke-width="1.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    data-obsidian-ui-icon
+    {{ $attributes->class($classes) }}
+>
+    <path ....../>
+</svg>
+```
+

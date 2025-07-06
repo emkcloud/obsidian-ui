@@ -4,9 +4,7 @@
 
 {{-- output --}}
 
-<svg data-obsidian-ui-icon 
-    {{ $attributes->class(ObsidianUI::classesIcon($size)) }}
-    xmlns="http://www.w3.org/2000/svg"
+<svg xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
     fill="none"
@@ -15,6 +13,9 @@
     stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
+    aria-hidden="true"
+    data-obsidian-ui-icon
+    {{ $attributes->class(ObsidianUI::classesIcon($size)) }}
 >
     <path d="M3.5 13h6" />
     <path d="m2 16 4.5-9 4.5 9" />

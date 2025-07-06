@@ -46,8 +46,6 @@ There are several predefined standard sizes that can be specified using the `siz
 <x-obsidian::icon.lucide.airplay size="micro"/>    <!-- 16 px -->
 ```
 
-## Custom Sizes
-
 If you need a custom size, use the size utility classes from Tailwind CSS.
 
 ```php

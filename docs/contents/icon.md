@@ -21,10 +21,10 @@ Where you need to specify the set name and the icon name in the following format
 <x-obsidian::icon.lucide.baggage-claim />
 ```
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="../images/check-circle-white.svg">
-  <img src="../images/check-circle-black.svg">
-</picture>&nbsp;
+><picture>
+>  <source media="(prefers-color-scheme: dark)" srcset="../images/check-circle-white.svg">
+>  <img src="../images/check-circle-black.svg">
+></picture>&nbsp;
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../images/baggage-claim-white.svg">

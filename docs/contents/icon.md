@@ -74,6 +74,7 @@ There are several predefined sizes that can be specified using the `size` proper
   <img src="../images/airplay-32-black.svg">
 </picture>
 
+
 If you need a custom size, use the [size utility classes](https://tailwindcss.com/docs/width) from Tailwind CSS.
 
 ```blade

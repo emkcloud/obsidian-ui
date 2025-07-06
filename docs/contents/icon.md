@@ -8,6 +8,9 @@ The package provides several icon sets ready to use right after installation, as
 
 To use them, simply use the Blade directive `<x-obsidian::icon>`, where you need to specify the set name and the icon name in the following format: `<x-obsidian::icon.{set}.{name}>` or `<x-obsidian::icon set="set" name="name">`
 
+![Home icon](../images/check-circle.svg)
+![Home icon](../images/baggage-claim.svg)
+
 ```php
 <x-obsidian::icon.hero.check-circle /> 
 <x-obsidian::icon.lucide.baggage-claim />

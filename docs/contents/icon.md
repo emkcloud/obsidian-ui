@@ -64,7 +64,9 @@ You can customize the color of an icon using Tailwind's [text color utilities](h
 <x-obsidian::icon.hero.circle-stack class="text-teal-500 dark:text-transparent"/>
 ```
 
+## Naming
+
 ## Custom icons
 
-For full control or add new icons, you can create the Blade files in the `resources/views/obsidian/icon` directory in your project.
+For add new icons, you can create the Blade files in the `resources/views/obsidian/icon` directory.
 

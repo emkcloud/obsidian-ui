@@ -29,7 +29,7 @@ Where you need to specify the set name and the icon name in the following format
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../images/baggage-claim-white.svg">
   <img src="../images/baggage-claim-black.svg">
-</picture>&nbsp;<br>
+</picture>&nbsp;<br><br>
 
 Alternative method for set name and the icon name in the following format:
 

@@ -114,6 +114,10 @@ You can customize the color of an icon using utilities [Tailwind's colors](https
 ```
 
 ><picture>
+>  <source media="(prefers-color-scheme: dark)" srcset="../images/bug-ant-white.svg">
+>  <img src="../images/bug-ant-black.svg">
+></picture>&nbsp;
+><picture>
 >  <source media="(prefers-color-scheme: dark)" srcset="../images/bug-ant-blue.svg">
 >  <img src="../images/bug-ant-blue.svg">
 ></picture>&nbsp;

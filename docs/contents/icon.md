@@ -23,8 +23,8 @@ Where you need to specify the set name and the icon name in the following format
 ```
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="../images/icon-check-circle1.svg">
-  <img src="../images/icon-check-circle2.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="../images/icon-check-circle-black1.svg">
+  <img src="../images/icon-check-circle-white1.svg">
 </picture>
 
 Alternative method for set name and the icon name in the following format:

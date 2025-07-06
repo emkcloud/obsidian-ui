@@ -48,6 +48,8 @@ There are several predefined standard sizes that can be specified using the `siz
 
 ## Custom Sizes
 
+If you need a custom size, use the size utility classes from Tailwind CSS.
+
 ```php
 <x-obsidian::icon.lucide.baggage-claim class="size-10"/>
 <x-obsidian::icon.lucide.baggage-claim class="size-12"/>

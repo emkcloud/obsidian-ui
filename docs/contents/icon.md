@@ -114,7 +114,7 @@ You can customize the color of an icon using utilities [Tailwind's colors](https
 <x-obsidian::icon.hero.bug-ant class="text-rose-700 dark:text-rose-700"/>
 ```
 
-><picture>
+><picture style="vertical-align:middle">
 >  <source media="(prefers-color-scheme: dark)" srcset="../images/bug-ant-white.svg">
 >  <img src="../images/bug-ant-black.svg">
 ></picture>&nbsp;

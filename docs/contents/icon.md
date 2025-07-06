@@ -86,8 +86,8 @@ You can customize the animation icon using utilities [Tailwind's animations](htt
 
 There are over a thousand icons, each with a different name, so listing them all wouldn't be practical. The best approach is to select the desired icon name directly from the official page of the icon set.
 
-* [Set Icon Lucide](https://lucide.dev/icons)
-* [Set Icon Heroicons](https://heroicons.com/)
+* [Names for Icons Lucide](https://lucide.dev/icons)
+* [Names for Icons Heroicons](https://heroicons.com/)
 
 On the Heroicons page the icons are already labeled with the name. As for Lucide, since there are many more icons, you can browse by category, and after selecting the icon you're interested in, you'll be able to see the corresponding name to use.
 

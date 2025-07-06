@@ -4,7 +4,7 @@ I'm developing an open-source package called [**Obsidian Dashboard**](https://gi
 
 Because of this licensing restriction, Flex UI PRO is not suitable for an open-source package released under the **MIT license**. As a result, I've decided to rewrite the essential components from a forked version of the project and rebuild the advanced features from scratch.
 
-This ensures the package remains fully open-source and free from any proprietary limitations. I'll only include the components that are strictly necessary for the package [**Emkcloud Obsidian Dashboard**](https://github.com/emkcloud/obsidian-dashboard) it is not intended to be a general-purpose UI kit.
+This ensures the package remains open-source and free from limitations. I'll only include the components that are strictly necessary for the package [**Emkcloud Obsidian Dashboard**](https://github.com/emkcloud/obsidian-dashboard) it is not intended to be a general-purpose UI kit.
 
 ## Requirements
 

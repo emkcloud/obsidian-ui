@@ -89,7 +89,7 @@ There are over a thousand icons, each with a different name, so listing them all
 * [Set Icon Lucide](https://lucide.dev/icons)
 * [Set Icon Heroicons](https://heroicons.com/)
 
-On the Heroicons page, the icons are already labeled with the name to use. As for Lucide, since there are many more icons, you can browse by category, and after selecting the icon you're interested in, you'll be able to see the corresponding name to use.
+On the Heroicons page the icons are already labeled with the name. As for Lucide, since there are many more icons, you can browse by category, and after selecting the icon you're interested in, you'll be able to see the corresponding name to use.
 
 [![Lucide](../images/lucide-search.jpg)](https://lucide.dev/icons)
 

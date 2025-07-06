@@ -71,6 +71,10 @@ There are over a thousand icons, each with a different name, so listing them all
 * [Set Icon Lucide](https://lucide.dev/icons)
 * [Set Icon Heroicons](https://heroicons.com/)
 
+On the Heroicons page, the icons are already labeled with the name to use. As for Lucide, since there are many more icons, you can browse by category, and after selecting the icon you're interested in, you'll be able to see the corresponding name to use.
+
+![Lucide](../images/lucide.jpg)
+
 ## Custom icons
 
 For add new icons, you can create the Blade files in the `resources/views/obsidian/icon/set-name/icon-name.blade.php` in your project. Once you've added your icons, use the same Blade directive as follows:

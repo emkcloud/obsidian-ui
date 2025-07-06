@@ -4,9 +4,7 @@ I'm developing an open-source package called [**Obsidian Dashboard**](https://gi
 
 Because of this licensing restriction, Flex UI PRO is not suitable for an open-source package released under the **MIT license**. As a result, I've decided to rewrite the essential components from a forked version of the project and rebuild the advanced features from scratch. This ensures the package remains fully open-source and free from any proprietary limitations. I'll only include the components that are strictly necessary for the package [**Emkcloud Obsidian Dashboard**](https://github.com/emkcloud/obsidian-dashboard) it is not intended to be a general-purpose UI kit.
 
-## Prerequisites
-
-Obsidian UI requires the following:
+## Requirements
 
 * Laravel 12.0+
 * Livewire 3.5.19+
@@ -24,11 +22,17 @@ composer require emkcloud/obsidian-ui
 
 The following components are included in the package:
 
-* Button
-* Dropdown
-* Icon
-* Separator
-* Tooltip
+* [Button](docs/contents/button.md)
+* [Dropdown](docs/contents/dropdown.md)
+* [Icon](docs/contents/icon.md)
+* [Separator](docs/contents/separator.md)
+* [Tooltip](docs/contents/tooltip.md)
+
+## Example Output
+
+## Configuration
+
+## Other Resources
 
 ## License
 

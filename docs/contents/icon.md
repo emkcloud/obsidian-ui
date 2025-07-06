@@ -68,7 +68,7 @@ You can customize the color of an icon using Tailwind's [text color utilities](h
 
 There are over a thousand icons, each with a different name, so listing them all wouldn't be practical. The best approach is to select the desired icon name directly from the official page of the icon set.
 
-* [Set Icon Lucide](https://lucide.dev/)
+* [Set Icon Lucide](https://lucide.dev/icons)
 * [Set Icon Heroicons](https://heroicons.com/)
 
 ## Custom icons

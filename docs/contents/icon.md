@@ -36,6 +36,8 @@ Alternative method for set name and the icon name in the following format:
 
 ## Sizes
 
+There are several predefined standard sizes that can be specified using the `size` property.
+
 ```php
 <x-obsidian::icon.lucide.baggage-claim/>                 <!-- 24 px -->
 <x-obsidian::icon.lucide.baggage-claim size="large"/>    <!-- 32 px -->

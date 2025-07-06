@@ -22,6 +22,8 @@ Where you need to specify the set name and the icon name in the following format
 <x-obsidian::icon.lucide.baggage-claim />
 ```
 
+![Icona](../images/check-circle.svg)
+
 Alternative method for set name and the icon name in the following format:
 
 ```blade

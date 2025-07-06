@@ -64,6 +64,14 @@ You can customize the color of an icon using Tailwind's [text color utilities](h
 <x-obsidian::icon.hero.circle-stack class="text-teal-500 dark:text-transparent"/>
 ```
 
+## Special
+
+There are special icons in the `base` set dedicated to specific operational states such as loading, edit, etc.
+
+```blade
+<x-obsidian::icon.base.loading/>
+```
+
 ## Naming
 
 There are over a thousand icons, each with a different name, so listing them all wouldn't be practical. The best approach is to select the desired icon name directly from the official page of the icon set.

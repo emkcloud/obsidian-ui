@@ -78,7 +78,7 @@ For add new icons, you can create the Blade files in the `resources/views/obsidi
 
 You can simply paste SVG code directly into the Blade file, however we recommend using the following template structure to ensure compatibility with other components:
 
-```
+```blade
 @props(['size' => 'standard'])
 
 @php $classes = ObsidianUI::classes('shrink-0')->add(match($size)

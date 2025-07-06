@@ -91,7 +91,7 @@ There are over a thousand icons, each with a different name, so listing them all
 
 On the Heroicons page, the icons are already labeled with the name to use. As for Lucide, since there are many more icons, you can browse by category, and after selecting the icon you're interested in, you'll be able to see the corresponding name to use.
 
-[![Lucide](../images/lucide-icons.jpg)](https://lucide.dev/icons)
+[![Lucide](../images/lucide-search.jpg)](https://lucide.dev/icons)
 
 ## Custom icons
 

@@ -140,6 +140,15 @@ There are special icons in the `base set` dedicated to specific operational stat
 <x-obsidian::icon.base.loading/>
 ```
 
+><picture>
+>  <source media="(prefers-color-scheme: dark)" srcset="../images/404-white.svg">
+>  <img src="../images/404-black.svg">
+></picture>&nbsp;
+><picture>
+>  <source media="(prefers-color-scheme: dark)" srcset="../images/loading-white1.svg">
+>  <img src="../images/loading-black1.svg">
+></picture>&nbsp;
+
 ## Animations
 
 You can customize the animation icon using utilities [Tailwind's animations](https://tailwindcss.com/docs/animation#adding-a-spin-animation)

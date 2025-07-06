@@ -98,16 +98,6 @@ You can simply paste SVG code directly into the Blade file, however we recommend
 ```blade
 @props(['size' => 'standard'])
 
-@php $classes = ObsidianUI::classes('shrink-0')->add(match($size)
-{
-    'large'    => '[:where(&)]:size-8 [:where(&)]:stroke-[1.5]',
-    'standard' => '[:where(&)]:size-6 [:where(&)]:stroke-[2.0]',
-    'small'    => '[:where(&)]:size-5 [:where(&)]:stroke-[2.4]',
-    'micro'    => '[:where(&)]:size-4 [:where(&)]:stroke-[3.0]',
-    default    => '[:where(&)]:size-6 [:where(&)]:stroke-[2.0]',
-});
-@endphp
-
 <svg xmlns="http://www.w3.org/2000/svg"
     width="24"
     height="24"
@@ -119,7 +109,7 @@ You can simply paste SVG code directly into the Blade file, however we recommend
     stroke-linejoin="round"
     aria-hidden="true"
     data-obsidian-ui-icon
-    {{ $attributes->class($classes) }}
+    {{ $attributes->class(ObsidianUI::classesIcon($size)) }}
 >
     <path ....../>
 </svg>

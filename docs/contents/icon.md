@@ -8,21 +8,23 @@ The package provides several icon sets ready to use right after installation, as
 
 To use them, simply use the Blade directive `<x-obsidian::icon>`
 
-# Examples
+# Usage
 
 Where you need to specify the set name and the icon name in the following format:
 
 `<x-obsidian::icon.{set}.{name}>`
 
 ```php
+<x-obsidian::icon.base.loading /> 
 <x-obsidian::icon.hero.check-circle /> 
 <x-obsidian::icon.lucide.baggage-claim />
 ```
 Alternative method for set name and the icon name in the following format:
 
-* `<x-obsidian::icon set="set" name="name">`
+`<x-obsidian::icon set="set" name="name">`
 
 ```php
+<x-obsidian::icon set="base" name="loading" /> 
 <x-obsidian::icon set="hero" name="check-circle" /> 
 <x-obsidian::icon set="lucide" name="baggage-claim" />
 ```

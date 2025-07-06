@@ -44,6 +44,7 @@ There are several predefined sizes that can be specified using the `size` proper
 <x-obsidian::icon.lucide.airplay size="standard"/> <!-- 24 px -->
 <x-obsidian::icon.lucide.airplay size="small"/>    <!-- 20 px -->
 <x-obsidian::icon.lucide.airplay size="micro"/>    <!-- 16 px -->
+<x-obsidian::icon.lucide.airplay size="full"/>     <!-- 100 % -->
 ```
 
 If you need a custom size, use the [size utility classes](https://tailwindcss.com/docs/width) from Tailwind CSS.

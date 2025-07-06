@@ -8,7 +8,7 @@ The package provides several icon sets ready to use right after installation, as
 
 To use them, simply use the Blade directive `<x-obsidian::icon>`
 
-# Usage
+## Usage
 
 Where you need to specify the set name and the icon name in the following format:
 
@@ -65,6 +65,11 @@ You can customize the color of an icon using Tailwind's [text color utilities](h
 ```
 
 ## Naming
+
+There are over a thousand icons, each with a different name, so listing them all wouldn't be practical. The best approach is to select the desired icon name directly from the official page of the icon set.
+
+* [Set Icon Lucide](https://lucide.dev/)
+* [Set Icon Heroicons](https://heroicons.com/)
 
 ## Custom icons
 

@@ -16,6 +16,11 @@ Where you need to specify the set name and the icon name in the following format
 <x-obsidian::icon.set.name>
 ```
 
+```blade
+<x-obsidian::icon.hero.check-circle /> 
+<x-obsidian::icon.lucide.baggage-claim />
+```
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../images/check-circle-white.svg">
   <img src="../images/check-circle-black.svg">
@@ -25,12 +30,6 @@ Where you need to specify the set name and the icon name in the following format
   <source media="(prefers-color-scheme: dark)" srcset="../images/baggage-claim-white.svg">
   <img src="../images/baggage-claim-black.svg">
 </picture>
-
-```blade
-<x-obsidian::icon.base.loading /> 
-<x-obsidian::icon.hero.check-circle /> 
-<x-obsidian::icon.lucide.baggage-claim />
-```
 
 Alternative method for set name and the icon name in the following format:
 

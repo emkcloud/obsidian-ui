@@ -38,7 +38,6 @@ Alternative method for set name and the icon name in the following format:
 ```
 
 ```blade
-<x-obsidian::icon set="base" name="loading" /> 
 <x-obsidian::icon set="hero" name="check-circle" /> 
 <x-obsidian::icon set="lucide" name="baggage-claim" />
 ```
@@ -49,12 +48,17 @@ There are several predefined sizes that can be specified using the `size` proper
 
 ```blade
 <x-obsidian::icon.lucide.airplay/>                 <!-- 24 px -->
-<x-obsidian::icon.lucide.airplay size="large"/>    <!-- 32 px -->
-<x-obsidian::icon.lucide.airplay size="standard"/> <!-- 24 px -->
-<x-obsidian::icon.lucide.airplay size="small"/>    <!-- 20 px -->
 <x-obsidian::icon.lucide.airplay size="micro"/>    <!-- 16 px -->
+<x-obsidian::icon.lucide.airplay size="small"/>    <!-- 20 px -->
+<x-obsidian::icon.lucide.airplay size="standard"/> <!-- 24 px -->
+<x-obsidian::icon.lucide.airplay size="large"/>    <!-- 32 px -->
 <x-obsidian::icon.lucide.airplay size="full"/>     <!-- 100 % -->
 ```
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../images/airplay-24-white.svg">
+  <img src="../images/airplay-24-black.svg">
+</picture>
 
 If you need a custom size, use the [size utility classes](https://tailwindcss.com/docs/width) from Tailwind CSS.
 

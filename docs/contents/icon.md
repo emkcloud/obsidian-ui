@@ -54,10 +54,24 @@ There are several predefined sizes that can be specified using the `size` proper
 <x-obsidian::icon.lucide.airplay size="large"/>    <!-- 32 px -->
 <x-obsidian::icon.lucide.airplay size="full"/>     <!-- 100 % -->
 ```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../images/airplay-16-white.svg">
+  <img src="../images/airplay-16-black.svg">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../images/airplay-20-white.svg">
+  <img src="../images/airplay-20-black.svg">
+</picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../images/airplay-24-white.svg">
   <img src="../images/airplay-24-black.svg">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../images/airplay-32-white.svg">
+  <img src="../images/airplay-32-black.svg">
 </picture>
 
 If you need a custom size, use the [size utility classes](https://tailwindcss.com/docs/width) from Tailwind CSS.

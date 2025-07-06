@@ -108,10 +108,23 @@ If you need a custom size, use the [size utility classes](https://tailwindcss.co
 You can customize the color of an icon using utilities [Tailwind's colors](https://tailwindcss.com/docs/color)
 
 ```blade
-<x-obsidian::icon.hero.beaker class="text-black dark:text-white"/>
-<x-obsidian::icon.hero.bug-ant class="text-amber-500 dark:text-amber-300"/>
-<x-obsidian::icon.hero.circle-stack class="text-teal-500 dark:text-transparent"/>
+<x-obsidian::icon.hero.bug-ant class="text-blue-700 dark:text-blue-700"/>
+<x-obsidian::icon.hero.bug-ant class="text-violet-700 dark:text-violet-700"/>
+<x-obsidian::icon.hero.bug-ant class="text-rose-700 dark:text-rose-700"/>
 ```
+
+><picture>
+>  <source media="(prefers-color-scheme: dark)" srcset="../images/bug-ant-blue.svg">
+>  <img src="../images/bug-ant-blue.svg">
+></picture>&nbsp;
+><picture>
+>  <source media="(prefers-color-scheme: dark)" srcset="../images/bug-ant-violet.svg">
+>  <img src="../images/bug-ant-violet.svg">
+></picture>&nbsp;
+><picture>
+>  <source media="(prefers-color-scheme: dark)" srcset="../images/bug-ant-rose.svg">
+>  <img src="../images/bug-ant-rose.svg">
+></picture>
 
 ## Specials
 

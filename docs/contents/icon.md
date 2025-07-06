@@ -72,6 +72,16 @@ There are special icons in the `base` set dedicated to specific operational stat
 <x-obsidian::icon.base.loading/>
 ```
 
+## Animation
+
+You can customize the animation icon using [Tailwind's animations](https://tailwindcss.com/docs/animation#adding-a-spin-animation)
+
+```blade
+<x-obsidian::icon.hero.academic-cap class="animate-spin"/>
+<x-obsidian::icon.hero.academic-cap class="animate-ping"/>
+<x-obsidian::icon.hero.academic-cap class="animate-pulse"/>
+```
+
 ## Naming
 
 There are over a thousand icons, each with a different name, so listing them all wouldn't be practical. The best approach is to select the desired icon name directly from the official page of the icon set.

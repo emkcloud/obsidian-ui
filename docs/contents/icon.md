@@ -37,9 +37,17 @@ Alternative method for set name and the icon name in the following format:
 ## Sizes
 
 ```php
-<x-obsidian::icon.lucide.baggage-claim/>                <!-- 24 px -->
-<x-obsidian::icon.lucide.baggage-claim size="large"/>   <!-- 32 px -->
-<x-obsidian::icon.lucide.baggage-claim size="standard"/><!-- 24 px -->
-<x-obsidian::icon.lucide.baggage-claim size="small"/>   <!-- 20 px -->
-<x-obsidian::icon.lucide.baggage-claim size="micro"/>   <!-- 16 px -->
+<x-obsidian::icon.lucide.baggage-claim/>                 <!-- 24 px -->
+<x-obsidian::icon.lucide.baggage-claim size="large"/>    <!-- 32 px -->
+<x-obsidian::icon.lucide.baggage-claim size="standard"/> <!-- 24 px -->
+<x-obsidian::icon.lucide.baggage-claim size="small"/>    <!-- 20 px -->
+<x-obsidian::icon.lucide.baggage-claim size="micro"/>    <!-- 16 px -->
+```
+
+## Custom Sizes
+
+```php
+<x-obsidian::icon.lucide.baggage-claim class="size-10"/>
+<x-obsidian::icon.lucide.baggage-claim class="size-12"/>
+<x-obsidian::icon.lucide.baggage-claim class="size-14"/>
 ```

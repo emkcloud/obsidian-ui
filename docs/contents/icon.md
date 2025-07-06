@@ -24,12 +24,12 @@ Where you need to specify the set name and the icon name in the following format
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../images/check-circle-white.svg">
   <img src="../images/check-circle-black.svg">
-</picture>
+</picture>&nbsp;
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../images/baggage-claim-white.svg">
   <img src="../images/baggage-claim-black.svg">
-</picture>
+</picture>&nbsp;
 
 Alternative method for set name and the icon name in the following format:
 

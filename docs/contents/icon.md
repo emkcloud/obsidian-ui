@@ -78,20 +78,18 @@ If you need a custom size, use the [size utility classes](https://tailwindcss.co
 <x-obsidian::icon.lucide.audio-waveform class="size-9"/>
 ```
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="../images/waveform-28-white1.svg">
-  <img src="../images/waveform-28-black1.svg">
-</picture>&nbsp;
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="../images/waveform-32-white1.svg">
-  <img src="../images/waveform-32-black1.svg">
-</picture>&nbsp;
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="../images/waveform-36-white1.svg">
-  <img src="../images/waveform-36-black1.svg">
-</picture>
+><picture>
+>  <source media="(prefers-color-scheme: dark)" srcset="../images/waveform-28-white1.svg">
+>  <img src="../images/waveform-28-black1.svg">
+></picture>&nbsp;
+><picture>
+>  <source media="(prefers-color-scheme: dark)" srcset="../images/waveform-32-white1.svg">
+>  <img src="../images/waveform-32-black1.svg">
+></picture>&nbsp;
+><picture>
+>  <source media="(prefers-color-scheme: dark)" srcset="../images/waveform-36-white1.svg">
+>  <img src="../images/waveform-36-black1.svg">
+></picture>
 
 ## Colors
 

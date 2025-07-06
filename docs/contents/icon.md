@@ -95,7 +95,7 @@ On the Heroicons page, the icons are already labeled with the name to use. As fo
 
 ## Custom icons
 
-For new icons, you can create the Blade files in the `resources/views/obsidian/icon/set-name/icon-name.blade.php` in your project. Once you've added your icons, use the same Blade directive as follows:
+For new icons create the Blade files in the `resources/views/obsidian/icon/set-name/icon-name.blade.php` in your project. Once you've added your icons, use the same Blade directive as follows:
 
 ```blade
 <x-obsidian::icon.set-name.icon-name/>

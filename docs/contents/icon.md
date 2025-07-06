@@ -39,11 +39,11 @@ Alternative method for set name and the icon name in the following format:
 There are several predefined standard sizes that can be specified using the `size` property.
 
 ```php
-<x-obsidian::icon.lucide.baggage-claim/>                 <!-- 24 px -->
-<x-obsidian::icon.lucide.baggage-claim size="large"/>    <!-- 32 px -->
-<x-obsidian::icon.lucide.baggage-claim size="standard"/> <!-- 24 px -->
-<x-obsidian::icon.lucide.baggage-claim size="small"/>    <!-- 20 px -->
-<x-obsidian::icon.lucide.baggage-claim size="micro"/>    <!-- 16 px -->
+<x-obsidian::icon.lucide.airplay/>                 <!-- 24 px -->
+<x-obsidian::icon.lucide.airplay size="large"/>    <!-- 32 px -->
+<x-obsidian::icon.lucide.airplay size="standard"/> <!-- 24 px -->
+<x-obsidian::icon.lucide.airplay size="small"/>    <!-- 20 px -->
+<x-obsidian::icon.lucide.airplay size="micro"/>    <!-- 16 px -->
 ```
 
 ## Custom Sizes
@@ -51,7 +51,17 @@ There are several predefined standard sizes that can be specified using the `siz
 If you need a custom size, use the size utility classes from Tailwind CSS.
 
 ```php
-<x-obsidian::icon.lucide.baggage-claim class="size-10"/>
-<x-obsidian::icon.lucide.baggage-claim class="size-12"/>
-<x-obsidian::icon.lucide.baggage-claim class="size-14"/>
+<x-obsidian::icon.lucide.audio-waveform class="size-10"/>
+<x-obsidian::icon.lucide.audio-waveform class="size-12"/>
+<x-obsidian::icon.lucide.audio-waveform class="size-14"/>
+```
+
+## Color
+
+You can customize the color of an icon using Tailwind's [text color utilities](https://tailwindcss.com/docs/color)
+
+```php
+<x-obsidian::icon.hero.beaker class="text-black dark:text-white"/>
+<x-obsidian::icon.hero.bug-ant class="text-amber-500 dark:text-amber-300"/>
+<x-obsidian::icon.hero.circle-stack class="text-teal-500 dark:text-transparent"/>
 ```

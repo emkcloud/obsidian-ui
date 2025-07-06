@@ -12,16 +12,21 @@ To use them, simply use the Blade directive `<x-obsidian::icon>`
 
 Where you need to specify the set name and the icon name in the following format:
 
-`<x-obsidian::icon.{set}.{name}>`
+```php
+<x-obsidian::icon.set.name>
+```
 
 ```php
 <x-obsidian::icon.base.loading /> 
 <x-obsidian::icon.hero.check-circle /> 
 <x-obsidian::icon.lucide.baggage-claim />
 ```
+
 Alternative method for set name and the icon name in the following format:
 
-`<x-obsidian::icon set="set" name="name">`
+```php
+<x-obsidian::icon set="set" name="name">
+```
 
 ```php
 <x-obsidian::icon set="base" name="loading" /> 

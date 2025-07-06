@@ -103,7 +103,7 @@ For new icons, you can create the Blade files in the `resources/views/obsidian/i
 <x-obsidian::icon set="set-name" name="icon-name" size="small"/>
 ```
 
-You can simply paste SVG code directly into the Blade file, however we recommend using the following template structure to ensure compatibility with other components:
+You can simply paste SVG code directly into the Blade file, however we recommend using the following structure to ensure compatibility with other components:
 
 ```blade
 @props(['size' => 'standard'])

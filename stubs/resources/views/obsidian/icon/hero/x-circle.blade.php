@@ -21,9 +21,10 @@
     fill="none"
     viewBox="0 0 24 24"
     stroke="currentColor"
-    stroke-width="1.5"
+    stroke-width="2"
     stroke-linecap="round"
     stroke-linejoin="round"
+    aria-hidden="true"
     data-obsidian-ui-icon
     {{ $attributes->class($classes) }}
 >

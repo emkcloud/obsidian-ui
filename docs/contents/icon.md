@@ -56,7 +56,7 @@ If you need a custom size, use the [size utility classes](https://tailwindcss.co
 
 ## Color
 
-You can customize the color of an icon using Tailwind's [text color utilities](https://tailwindcss.com/docs/color)
+You can customize the color of an icon using [Tailwind's color utilities](https://tailwindcss.com/docs/color)
 
 ```blade
 <x-obsidian::icon.hero.beaker class="text-black dark:text-white"/>

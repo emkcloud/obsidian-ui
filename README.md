@@ -20,6 +20,16 @@ Run the following command from your project's root directory:
 composer require emkcloud/obsidian-ui
 ```
 
+## What's included?
+
+The following components are included in the package:
+
+* Button
+* Dropdown
+* Icon
+* Separator
+* Tooltip
+
 ## License
 
 The MIT License (MIT). Please see the package [License file](LICENSE) for more information.

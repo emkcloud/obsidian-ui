@@ -74,16 +74,30 @@ There are several predefined sizes that can be specified using the `size` proper
   <img src="../images/airplay-32-black.svg">
 </picture>
 
-
 If you need a custom size, use the [size utility classes](https://tailwindcss.com/docs/width) from Tailwind CSS.
 
 ```blade
-<x-obsidian::icon.lucide.audio-waveform class="size-10"/>
-<x-obsidian::icon.lucide.audio-waveform class="size-12"/>
-<x-obsidian::icon.lucide.audio-waveform class="size-14"/>
+<x-obsidian::icon.lucide.audio-waveform class="size-7"/>
+<x-obsidian::icon.lucide.audio-waveform class="size-8"/>
+<x-obsidian::icon.lucide.audio-waveform class="size-9"/>
 ```
 
-## Color
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../images/waveform-28-white1.svg">
+  <img src="../images/waveform-28-black1.svg">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../images/waveform-32-white1.svg">
+  <img src="../images/waveform-32-black1.svg">
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="../images/waveform-36-white1.svg">
+  <img src="../images/waveform-36-black1.svg">
+</picture>
+
+## Colors
 
 You can customize the color of an icon using utilities [Tailwind's colors](https://tailwindcss.com/docs/color)
 
@@ -93,7 +107,7 @@ You can customize the color of an icon using utilities [Tailwind's colors](https
 <x-obsidian::icon.hero.circle-stack class="text-teal-500 dark:text-transparent"/>
 ```
 
-## Special
+## Specials
 
 There are special icons in the `base set` dedicated to specific operational states such as loading, edit, etc.
 
@@ -102,7 +116,7 @@ There are special icons in the `base set` dedicated to specific operational stat
 <x-obsidian::icon.base.loading/>
 ```
 
-## Animation
+## Animations
 
 You can customize the animation icon using utilities [Tailwind's animations](https://tailwindcss.com/docs/animation#adding-a-spin-animation)
 

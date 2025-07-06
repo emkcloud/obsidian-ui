@@ -66,5 +66,5 @@ You can customize the color of an icon using Tailwind's [text color utilities](h
 
 ## Custom icons
 
-For full control over your icons, you can create your own Blade files in the `resources/views/obsidian/icon` directory in your project.
+For full control or add new icons, you can create the Blade files in the `resources/views/obsidian/icon` directory in your project.
 

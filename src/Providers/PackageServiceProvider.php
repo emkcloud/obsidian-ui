@@ -6,12 +6,14 @@ use Emkcloud\ObsidianUI\Core\PackageManager;
 use Emkcloud\ObsidianUI\Facades\ObsidianUI;
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class PackageServiceProvider extends ServiceProvider
 {
     public function boot(): void
     {
+        $this->bootViews();
         $this->bootComponents();
     }
 
@@ -22,7 +24,12 @@ class PackageServiceProvider extends ServiceProvider
             Blade::anonymousComponentPath(resource_path('views/obsidian'), 'obsidian');
         }
 
-        Blade::anonymousComponentPath(__DIR__.'/../../stubs/resources/views/obsidian', 'obsidian');
+        Blade::anonymousComponentPath(__DIR__.'/../../resources/components', 'obsidian');
+    }
+
+    private function bootViews()
+    {
+        View::addNamespace('obsidian-ui', __DIR__.'/../../resources/views');
     }
 
     public function register(): void

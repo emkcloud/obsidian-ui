@@ -6,14 +6,14 @@ The package provides several icon sets ready to use right after installation, as
 * [Lucide: Beautiful & consistent icons](https://lucide.dev/)
 * [Heroicons: Beautiful hand-crafted SVG icons by Tailwind CSS](https://heroicons.com/)
 
-To use them, simply use the package Blade directive `<x-obsidian::icon>`
+To use them, simply use the package Blade directive `<x-obsidian::icon/>`
 
 ## Usage
 
 Where you need to specify the set name and the icon name in the following format:
 
 ```blade
-<x-obsidian::icon.set.name>
+<x-obsidian::icon.set.name/>
 ```
 
 ```blade
@@ -43,7 +43,7 @@ Where you need to specify the set name and the icon name in the following format
 Alternative method for set name and the icon name in the following format:
 
 ```blade
-<x-obsidian::icon set="set" name="name">
+<x-obsidian::icon set="set" name="name"/>
 ```
 
 ```blade

@@ -20,11 +20,11 @@ composer require emkcloud/obsidian-ui
 
 ## What's included?
 
-* [Button](docs/contents/button.md)
-* [Dropdown](docs/contents/dropdown.md)
-* [Icon](docs/contents/icon.md)
-* [Separator](docs/contents/separator.md)
-* [Tooltip](docs/contents/tooltip.md)
+* [Components Button](docs/contents/button.md)
+* [Components Dropdown](docs/contents/dropdown.md)
+* [Components Icon](docs/contents/icon.md)
+* [Components Separator](docs/contents/separator.md)
+* [Components Tooltip](docs/contents/tooltip.md)
 
 ## Example Output
 

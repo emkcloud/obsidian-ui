@@ -12,15 +12,11 @@ Because of this licensing restriction, Flex UI PRO is not suitable for an open-s
 
 ## Installation
 
-Run the following command from your project's root directory:
-
 ```bash
 composer require emkcloud/obsidian-ui
 ```
 
 ## What's included?
-
-The following components are included in the package:
 
 * [Button](docs/contents/button.md)
 * [Dropdown](docs/contents/dropdown.md)
@@ -34,8 +30,8 @@ The following components are included in the package:
 
 ## Other Resources
 
-* [Heroicons: Beautiful hand-crafted SVG icons](https://heroicons.com/)
 * [Lucide: Beautiful & consistent icons](https://lucide.dev/)
+* [Heroicons: Beautiful SVG icons](https://heroicons.com/)
 
 ## License
 

@@ -84,7 +84,7 @@ If you need a custom size, use the [size utility classes](https://tailwindcss.co
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="../images/waveform-28-white1.svg">
-  <img src="../images/waveform-28-black1.svg">
+  <img src="../images/waveform-28-black1.svg" style="margin-right:10px">
 </picture>&nbsp;
 
 <picture>

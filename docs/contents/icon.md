@@ -19,6 +19,7 @@ Where you need to specify the set name and the icon name in the following format
 ```blade
 <x-obsidian::icon.hero.check-circle/>
 <x-obsidian::icon.hero.bell-alert/>
+<x-obsidian::icon.lucide.atom/>
 <x-obsidian::icon.lucide.baggage-claim/>
 ```
 
@@ -29,6 +30,9 @@ Where you need to specify the set name and the icon name in the following format
 ><picture>
 >  <source media="(prefers-color-scheme: dark)" srcset="../images/bell-alert-white.svg">
 >  <img src="../images/bell-alert-black.svg">
+></picture>&nbsp;
+>  <source media="(prefers-color-scheme: dark)" srcset="../images/atom-white.svg">
+>  <img src="../images/atom-black.svg">
 ></picture>&nbsp;
 ><picture>
 >  <source media="(prefers-color-scheme: dark)" srcset="../images/baggage-claim-white.svg">
@@ -42,8 +46,10 @@ Alternative method for set name and the icon name in the following format:
 ```
 
 ```blade
-<x-obsidian::icon set="hero" name="check-circle" /> 
-<x-obsidian::icon set="lucide" name="baggage-claim" />
+<x-obsidian::icon set="hero" name="check-circle"/> 
+<x-obsidian::icon set="hero" name="bell-alert"/> 
+<x-obsidian::icon set="lucide" name="atom"/>
+<x-obsidian::icon set="lucide" name="baggage-claim"/>
 ```
 
 ## Sizes

@@ -68,5 +68,9 @@ You can customize the color of an icon using Tailwind's [text color utilities](h
 
 ## Custom icons
 
-For add new icons, you can create the Blade files in the `resources/views/obsidian/icon` directory.
+For add new icons, you can create the Blade files in the `resources/views/obsidian/icon/{setname}` directory in your project. Once you've added your icons, use the same Blade directive as follows:
 
+```php
+<x-obsidian::icon.{set-name}.{icon-name}/>
+<x-obsidian::icon.{set-name}.{icon-name} size="micro"/>
+```

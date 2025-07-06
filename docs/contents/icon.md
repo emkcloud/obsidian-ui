@@ -145,8 +145,8 @@ There are special icons in the `base set` dedicated to specific operational stat
 >  <img src="../images/error-404-black1.svg">
 ></picture>&nbsp;
 ><picture>
->  <source media="(prefers-color-scheme: dark)" srcset="../images/loading-white2.svg">
->  <img src="../images/loading-black2.svg">
+>  <source media="(prefers-color-scheme: dark)" srcset="../images/loading-white3.svg">
+>  <img src="../images/loading-black3.svg">
 ></picture>&nbsp;
 
 ## Animations

@@ -160,8 +160,8 @@ You can customize the animation icon using utilities [Tailwind's animations](htt
 ```
 
 ><picture>
->  <source media="(prefers-color-scheme: dark)" srcset="../images/star-animate-white1.svg">
->  <img src="../images/star-animate-black1.svg">
+>  <source media="(prefers-color-scheme: dark)" srcset="../images/star-animate-white2.svg">
+>  <img src="../images/star-animate-black2.svg">
 ></picture>&nbsp;
 
 ## Naming

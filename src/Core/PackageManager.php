@@ -21,6 +21,7 @@ class PackageManager
             'micro' => '[:where(&)]:size-4 [:where(&)]:stroke-[3.0]',
             'full'  => '[:where(&)]:size-full [:where(&)]:stroke-[1.0]',
             default => '[:where(&)]:size-6 [:where(&)]:stroke-[2.0]',
-        });
+
+        })->add('text-[var(--obsidian-color-500)] dark:text-white/80');
     }
 }

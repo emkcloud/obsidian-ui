@@ -1,0 +1,51 @@
+@theme
+{
+    --obsidian-color-50: var(--color-zinc-50);
+    --obsidian-color-100: var(--color-zinc-100);
+    --obsidian-color-200: var(--color-zinc-200);
+    --obsidian-color-300: var(--color-zinc-300);
+    --obsidian-color-400: var(--color-zinc-400);
+    --obsidian-color-500: var(--color-zinc-500);
+    --obsidian-color-600: var(--color-zinc-600);
+    --obsidian-color-700: var(--color-zinc-700);
+    --obsidian-color-800: var(--color-zinc-800);
+    --obsidian-color-900: var(--color-zinc-900);
+    --obsidian-color-950: var(--color-zinc-950);
+}
+
+@theme
+{
+    --obsidian-color-accent: var(--obsidian-color-800);
+    --obsidian-color-accent-content: var(--obsidian-color-800);
+    --obsidian-color-accent-foreground: var(--color-white);
+
+    --obsidian-color-danger: var(--color-red-500);
+    --obsidian-color-info: var(--color-sky-500);
+    --obsidian-color-success: var(--color-green-500);
+    --obsidian-color-warning: var(--color-amber-500);
+
+    --obsidian-color-danger-hover: var(--color-red-600);
+    --obsidian-color-info-hover: var(--color-sky-600);
+    --obsidian-color-success-hover: var(--color-green-600);
+    --obsidian-color-warning-hover: var(--color-amber-600);
+}
+
+@layer theme
+{
+    .dark
+    {
+        --obsidian-color-accent: var(--color-white);
+        --obsidian-color-accent-content: var(--color-white);
+        --obsidian-color-accent-foreground: var(--obsidian-color-800);
+
+        --obsidian-color-danger: var(--color-red-600);
+        --obsidian-color-info: var(--color-sky-600);
+        --obsidian-color-success: var(--color-green-600);
+        --obsidian-color-warning: var(--color-amber-600);
+
+        --obsidian-color-danger-hover: var(--color-red-500);
+        --obsidian-color-info-hover: var(--color-sky-500);
+        --obsidian-color-success-hover: var(--color-green-500);
+        --obsidian-color-warning-hover: var(--color-amber-500);
+     }
+}

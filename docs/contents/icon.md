@@ -157,6 +157,7 @@ You can customize the animation icon using utilities [Tailwind's animations](htt
 <x-obsidian::icon.hero.academic-cap class="animate-spin"/>
 <x-obsidian::icon.hero.academic-cap class="animate-pulse"/>
 <x-obsidian::icon.hero.academic-cap class="animate-ping"/>
+<x-obsidian::icon.hero.academic-cap class="animate-bounce"/>
 ```
 
 ><picture>
@@ -170,6 +171,10 @@ You can customize the animation icon using utilities [Tailwind's animations](htt
 ><picture>
 >  <source media="(prefers-color-scheme: dark)" srcset="../images/star-animate-white-ping.svg">
 >  <img src="../images/star-animate-black-ping.svg">
+></picture>&nbsp;
+><picture>
+>  <source media="(prefers-color-scheme: dark)" srcset="../images/star-animate-white-bounce.svg">
+>  <img src="../images/star-animate-black-bounce.svg">
 ></picture>&nbsp;
 
 ## Naming

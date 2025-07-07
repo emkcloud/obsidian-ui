@@ -154,15 +154,15 @@ There are special icons in the `base set` dedicated to specific operational stat
 You can customize the animation icon using utilities [Tailwind's animations](https://tailwindcss.com/docs/animation#adding-a-spin-animation)
 
 ```blade
-<x-obsidian::icon.hero.academic-cap class="animate-spin"/>
+<x-obsidian::icon.hero.academic-cap class="animate-bounce"/>
 <x-obsidian::icon.hero.academic-cap class="animate-pulse"/>
 <x-obsidian::icon.hero.academic-cap class="animate-ping"/>
-<x-obsidian::icon.hero.academic-cap class="animate-bounce"/>
+<x-obsidian::icon.hero.academic-cap class="animate-spin"/>
 ```
 
 ><picture>
->  <source media="(prefers-color-scheme: dark)" srcset="../images/star-animate-white-spin.svg">
->  <img src="../images/star-animate-black-spin.svg">
+>  <source media="(prefers-color-scheme: dark)" srcset="../images/star-animate-white-bounce.svg">
+>  <img src="../images/star-animate-black-bounce.svg">
 ></picture>&nbsp;
 ><picture>
 >  <source media="(prefers-color-scheme: dark)" srcset="../images/star-animate-white-pulse.svg">
@@ -173,8 +173,8 @@ You can customize the animation icon using utilities [Tailwind's animations](htt
 >  <img src="../images/star-animate-black-ping.svg">
 ></picture>&nbsp;
 ><picture>
->  <source media="(prefers-color-scheme: dark)" srcset="../images/star-animate-white-bounce.svg">
->  <img src="../images/star-animate-black-bounce.svg">
+>  <source media="(prefers-color-scheme: dark)" srcset="../images/star-animate-white-spin.svg">
+>  <img src="../images/star-animate-black-spin.svg">
 ></picture>&nbsp;
 
 ## Naming

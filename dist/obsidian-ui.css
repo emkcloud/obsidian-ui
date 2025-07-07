@@ -20,14 +20,15 @@
     --obsidian-color-accent-foreground: var(--color-white);
 
     --obsidian-color-danger: var(--color-red-500);
-    --obsidian-color-info: var(--color-sky-500);
-    --obsidian-color-success: var(--color-green-500);
-    --obsidian-color-warning: var(--color-amber-500);
-
     --obsidian-color-danger-hover: var(--color-red-600);
+    --obsidian-color-info: var(--color-sky-500);
     --obsidian-color-info-hover: var(--color-sky-600);
+    --obsidian-color-success: var(--color-green-500);
     --obsidian-color-success-hover: var(--color-green-600);
+    --obsidian-color-warning: var(--color-amber-500);
     --obsidian-color-warning-hover: var(--color-amber-600);
+
+    --obsidian-color-white: var(--color-white);
 }
 
 @layer theme
@@ -39,13 +40,14 @@
         --obsidian-color-accent-foreground: var(--obsidian-color-800);
 
         --obsidian-color-danger: var(--color-red-600);
-        --obsidian-color-info: var(--color-sky-600);
-        --obsidian-color-success: var(--color-green-600);
-        --obsidian-color-warning: var(--color-amber-600);
-
         --obsidian-color-danger-hover: var(--color-red-500);
         --obsidian-color-info-hover: var(--color-sky-500);
+        --obsidian-color-info: var(--color-sky-600);
+        --obsidian-color-success: var(--color-green-600);
         --obsidian-color-success-hover: var(--color-green-500);
+        --obsidian-color-warning: var(--color-amber-600);
         --obsidian-color-warning-hover: var(--color-amber-500);
-     }
+
+        --obsidian-color-white: var(--color-white);
+    }
 }

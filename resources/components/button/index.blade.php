@@ -4,7 +4,7 @@
 
 {{-- classes --}}
 
-@php 
+@php
 
     $classes = ObsidianUI::classes()
 

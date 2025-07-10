@@ -1,0 +1,54 @@
+@theme
+{
+    --obsidian-color-base: var(--color-white);
+    --obsidian-color-base-50: var(--color-neutral-50);
+    --obsidian-color-base-100: var(--color-neutral-100);
+    --obsidian-color-base-200: var(--color-neutral-200);
+    --obsidian-color-base-300: var(--color-neutral-300);
+    --obsidian-color-base-400: var(--color-neutral-400);
+    --obsidian-color-base-500: var(--color-neutral-500);
+    --obsidian-color-base-600: var(--color-neutral-600);
+    --obsidian-color-base-700: var(--color-neutral-700);
+    --obsidian-color-base-800: var(--color-neutral-800);
+    --obsidian-color-base-900: var(--color-neutral-900);
+    --obsidian-color-base-950: var(--color-neutral-950);
+}
+
+@theme
+{
+    --obsidian-color-accent: var(--obsidian-color-800);
+    --obsidian-color-accent-content: var(--obsidian-color-800);
+    --obsidian-color-accent-foreground: var(--color-white);
+
+    --obsidian-color-danger: var(--color-red-500);
+    --obsidian-color-danger-hover: var(--color-red-600);
+    --obsidian-color-info: var(--color-sky-500);
+    --obsidian-color-info-hover: var(--color-sky-600);
+    --obsidian-color-success: var(--color-green-500);
+    --obsidian-color-success-hover: var(--color-green-600);
+    --obsidian-color-warning: var(--color-amber-500);
+    --obsidian-color-warning-hover: var(--color-amber-600);
+
+    --obsidian-color-white: var(--color-white);
+}
+
+@layer theme
+{
+    .dark
+    {
+        --obsidian-color-accent: var(--color-white);
+        --obsidian-color-accent-content: var(--color-white);
+        --obsidian-color-accent-foreground: var(--obsidian-color-800);
+
+        --obsidian-color-danger: var(--color-red-600);
+        --obsidian-color-danger-hover: var(--color-red-500);
+        --obsidian-color-info-hover: var(--color-sky-500);
+        --obsidian-color-info: var(--color-sky-600);
+        --obsidian-color-success: var(--color-green-600);
+        --obsidian-color-success-hover: var(--color-green-500);
+        --obsidian-color-warning: var(--color-amber-600);
+        --obsidian-color-warning-hover: var(--color-amber-500);
+
+        --obsidian-color-white: var(--color-white);
+    }
+}

@@ -2,6 +2,7 @@
 
 namespace Emkcloud\ObsidianUI\Providers;
 
+use Emkcloud\ObsidianUI\Core\AssetManager;
 use Emkcloud\ObsidianUI\Core\PackageManager;
 use Emkcloud\ObsidianUI\Facades\ObsidianUI;
 use Illuminate\Foundation\AliasLoader;
@@ -15,6 +16,12 @@ class PackageServiceProvider extends ServiceProvider
     {
         $this->bootViews();
         $this->bootComponents();
+        $this->bootAssets();
+    }
+
+    private function bootAssets()
+    {
+        AssetManager::boot();
     }
 
     private function bootComponents()

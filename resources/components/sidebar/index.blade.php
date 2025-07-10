@@ -1,6 +1,6 @@
 {{-- output --}}
 
-<div class="[grid-area:sidebar]
+<div id="sidebar" class="[grid-area:sidebar]
         w-70 p-6
         overflow-auto
         sticky

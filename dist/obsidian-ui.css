@@ -16,11 +16,19 @@
 
 @theme
 {
+    --obsidian-default-color: var(--obsidian-color-base-500);
+    --obsidian-default-color-selected: var(--obsidian-color-base-950);
+    --obsidian-default-border-color: var(--obsidian-color-base-100);
+    --obsidian-default-border-color-selected: var(--obsidian-color-base-300);
 }
 
 @layer theme
 {
     .dark
     {
+        --obsidian-default-color: var(--obsidian-color-base-300);
+        --obsidian-default-color-selected: var(--obsidian-color-base);
+        --obsidian-default-border-color: var(--obsidian-color-base-700);
+        --obsidian-default-border-color-selected: var(--obsidian-color-base-500);
     }
 }

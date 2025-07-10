@@ -9,8 +9,7 @@
     $classes = ObsidianUI::classes('flex flex-col mt-4 first:mt-0');
 
     $headcss = ObsidianUI::classes('mb-3')
-        ->add('text-[var(--obsidian-color-base-700)]')
-        ->add('dark:text-[var(--obsidian-color-base)]');
+        ->add('text-[var(--obsidian-default-color-selected)]');
 
     $slotcss = ObsidianUI::classes('group is-group flex flex-col');
 

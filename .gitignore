@@ -3,8 +3,8 @@
 /.pest.phpunit.cache
 /.php-cs-fixer.cache
 /.phpunit.result.cache
-/.vscode/
+/.vscode
 /composer.lock
-/node_modules/
+/node_modules
 /package-lock.json
-/vendor/
+/vendor

@@ -1,16 +1,21 @@
-<style{{$nonce}}>
-    :root.dark { color-scheme: dark; }
-</style>
+{{-- output --}}
 
 <script{{$nonce}}>
 
-    window.ObsidianUI =
+    window.ObsidianUIAppearance =
     {
+        STORAGE_KEY: 'ObsidianUI.appearance',
+
+        initAppearance()
+        {
+            this.applyAppearance(window.localStorage.getItem(this.STORAGE_KEY) || 'system');
+        },
+
         applyAppearance(appearance)
         {
             const applyThemeFromAppearance = () =>
             {
-                window.localStorage.setItem('ObsidianUI.appearance', appearance);
+                window.localStorage.setItem(this.STORAGE_KEY, appearance);
 
                 appearance === 'dark' ? applyThemeDark() : applyThemeLight();
             };
@@ -45,13 +50,13 @@
 
                 let media = window.matchMedia('(prefers-color-scheme: dark)');
 
-                window.localStorage.removeItem('ObsidianUI.appearance');
+                window.localStorage.removeItem(this.STORAGE_KEY);
 
                 media.matches ? applyThemeDark() : applyThemeLight();
             }
         }
     }
 
-    window.ObsidianUI.applyAppearance(window.localStorage.getItem('ObsidianUI.appearance') || 'system');
+    window.ObsidianUIAppearance.initAppearance();
 
 </script>

@@ -27,7 +27,12 @@ class PackageManager
             'full' => '[:where(&)]:size-full [:where(&)]:stroke-[1.0]',
             default => '[:where(&)]:size-6 [:where(&)]:stroke-[2.0]',
         })
-        ->add('[:where(&)]:text-[var(--obsidian-color-800)]')
-        ->add('[:where(&)]:dark:text-[var(--obsidian-white)]/80');
+            ->add('[:where(&)]:text-[var(--obsidian-color-800)]')
+            ->add('[:where(&)]:dark:text-[var(--obsidian-white)]/80');
+    }
+
+    public function scripts($options = [])
+    {
+        return AssetManager::scripts($options);
     }
 }

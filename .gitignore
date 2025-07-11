@@ -1,5 +1,6 @@
 /.env
 /composer.lock
+/node_modules/
 /vendor/
 /.php-cs-fixer.cache
 /.DS_Store

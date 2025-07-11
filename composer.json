@@ -30,7 +30,7 @@
     "require": {
         "php": "^8.2",
         "illuminate/support": "^12.0",
-        "livewire/livewire": "^3.5.19"
+        "livewire/livewire": "^3.6.3"
     },
     "extra": {
         "laravel": {

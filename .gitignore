@@ -1,9 +1,10 @@
 /.env
+/.DS_Store
+/.pest.phpunit.cache
+/.php-cs-fixer.cache
+/.phpunit.result.cache
+/.vscode/
 /composer.lock
 /node_modules/
+/package-lock.json
 /vendor/
-/.php-cs-fixer.cache
-/.DS_Store
-/.vscode/
-/.phpunit.result.cache
-/.pest.phpunit.cache

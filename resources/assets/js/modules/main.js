@@ -11,8 +11,18 @@ const ObsidianUI = new Proxy(
 
     init()
     {
-        this.dark = document.documentElement.classList.contains('dark');
-        this.appearance = window.localStorage.getItem(this.storage) || 'system';
+        this.dark = this.checkAppearanceClass();
+        this.appearance = this.getAppearanceStorage();
+    },
+
+    checkAppearanceClass()
+    {
+        return document.documentElement.classList.contains('dark');
+    },
+
+    getAppearanceStorage()
+    {
+        return window.localStorage.getItem(this.storage) || 'system';
     },
 
     setAppearance(value)
@@ -79,3 +89,17 @@ document.addEventListener('livewire:navigated', () =>
         window.ObsidianUIAppearance.initAppearance();
     }
 })
+
+// Listens system theme changes and updates appearance
+// and the current appearance mode is set to 'system'.
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event) =>
+{
+    if (window.ObsidianUIAppearance?.initAppearance)
+    {
+        if (window.ObsidianUI.getAppearanceStorage() == 'system')
+        {
+            window.ObsidianUI.setAppearance('system');
+        }
+    }
+});

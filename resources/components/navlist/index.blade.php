@@ -1,8 +1,7 @@
 {{-- classes --}}
 
 @php
-    $classes = ObsidianUI::classes('flex flex-col')
-        ->add('text-[var(--obsidian-default-color)]');
+    $classes = ObsidianUI::classes('flex flex-col');
 @endphp
 
 {{-- output --}}

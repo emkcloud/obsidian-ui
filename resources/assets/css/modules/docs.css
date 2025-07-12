@@ -1,0 +1,32 @@
+[data-obsidian-ui-docs-section] > p
+{
+    @apply mb-4;
+}
+
+[data-obsidian-ui-docs-section] > p a
+{
+    @apply underline;
+    @apply underline-offset-6;
+    @apply decoration-1;
+    @apply hover:text-[var(--obsidian-base-text-color-highlight)];
+}
+
+[data-obsidian-ui-docs-section] > p code
+{
+    @apply px-2;
+    @apply py-0.5;
+    @apply inline-flex;
+    @apply items-center;
+    @apply leading-none;
+    @apply font-mono;
+    @apply rounded-md;
+    @apply align-middle;
+    @apply text-[var(--obsidian-base-text-color-highlight)];
+    @apply bg-[var(--obsidian-color-base-100)];
+    @apply dark:bg-[var(--obsidian-color-base-700)];
+}
+
+[data-obsidian-ui-docs-code] > pre
+{
+    @apply bg-transparent!;
+}

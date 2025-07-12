@@ -4,18 +4,18 @@
 
     window.ObsidianUIAppearance =
     {
-        STORAGE_KEY: 'ObsidianUI.appearance',
+        storage: 'ObsidianUI.appearance',
 
         initAppearance()
         {
-            this.applyAppearance(window.localStorage.getItem(this.STORAGE_KEY) || 'system');
+            this.applyAppearance(window.localStorage.getItem(this.storage) || 'system');
         },
 
         applyAppearance(appearance)
         {
             const applyThemeFromAppearance = () =>
             {
-                window.localStorage.setItem(this.STORAGE_KEY, appearance);
+                window.localStorage.setItem(this.storage, appearance);
 
                 appearance === 'dark' ? applyThemeDark() : applyThemeLight();
             };
@@ -23,23 +23,11 @@
             const applyThemeDark = () =>
             {
                 document.documentElement.classList.add('dark');
-
-                applyThemeGenerateEvent('dark');
             };
 
             const applyThemeLight = () =>
             {
                 document.documentElement.classList.remove('dark');
-
-                applyThemeGenerateEvent('light');
-            };
-
-            const applyThemeGenerateEvent = (theme) =>
-            {
-                window.dispatchEvent(new CustomEvent('obsidianui:appearance',
-                {
-                    detail: { theme: theme, appearance: appearance }
-                }));
             };
 
             if (['dark', 'light'].includes(appearance))
@@ -50,7 +38,7 @@
 
                 let media = window.matchMedia('(prefers-color-scheme: dark)');
 
-                window.localStorage.removeItem(this.STORAGE_KEY);
+                window.localStorage.removeItem(this.storage);
 
                 media.matches ? applyThemeDark() : applyThemeLight();
             }

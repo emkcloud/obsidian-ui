@@ -1,26 +1,36 @@
+@use('Emkcloud\ObsidianUI\Enums\Layout')
+@use('Emkcloud\ObsidianUI\Enums\Palette')
+@use('Emkcloud\ObsidianUI\Enums\Sidebars')
+
 {{-- setting --}}
 
 @props([
-    'layout'  => 'leonardo',
-    'palette' => 'minimal',
+    'layout'   => Layout::LEONARDO,
+    'palette'  => Palette::MINIMAL,
+    'sidebars' => Sidebars::STANDARD,
 ])
+
+{{-- normalize --}}
+
+@php 
+    $layout   = ObsidianUI::normalizeLayout($layout);
+    $palette  = ObsidianUI::normalizePalette($palette);
+    $sidebars = ObsidianUI::normalizeSidebars($sidebars);
+@endphp
 
 {{-- classes --}}
 
 @php
-    $classes = ObsidianUI::classes('grid');
+    $classes = ObsidianUI::classes('grid group/template');
 @endphp
 
 {{-- output --}}
 
-<div {{ $attributes->class($classes) }} data-obsidian-ui-template
-
-    style="    grid-template:
-        'header header header'
-        'sidebar main aside' 1fr
-        'footer footer footer' / min-content minmax(0, 1fr) min-content;
-    "
-    >
-
+<div {{ $attributes->class($classes) }} 
+    data-obsidian-ui-template
+    data-obsidian-ui-layout="{{ $layout }}"
+    data-obsidian-ui-palette="{{ $palette }}"
+    data-obsidian-ui-sidebars="{{ $sidebars }}"
+>
     {{ $slot }}
 </div>

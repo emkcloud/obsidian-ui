@@ -1,9 +1,11 @@
 {{-- classes --}}
 
 @php
-    $classes = ObsidianUI::classes('[grid-area:main] p-4')
-        ->add('text-[var(--obsidian-base-text-color)]')
-        ->add('bg-[var(--obsidian-base-background-color)]');
+    $classes = ObsidianUI::classes('[grid-area:main]')
+        ->add('[:where(&)]:py-8')
+        ->add('[:where(&)]:px-6')
+        ->add('[:where(&)]:text-[var(--obsidian-base-text-color)]')
+        ->add('[:where(&)]:bg-[var(--obsidian-base-background-color)]');
 @endphp
 
 {{-- output --}}

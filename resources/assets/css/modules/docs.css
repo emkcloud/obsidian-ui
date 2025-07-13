@@ -30,3 +30,54 @@
 {
     @apply bg-transparent!;
 }
+
+[data-obsidian-ui-docs-table]
+{
+    @apply [:where(&)]:pt-1;
+    @apply [:where(&)]:pb-2;
+    @apply [:where(&)]:px-2;
+    @apply [:where(&)]:w-full;
+    @apply [:where(&)]:border;
+    @apply [:where(&)]:rounded-2xl;
+    @apply [:where(&)]:overflow-auto;
+    @apply [:where(&)]:border-black/10;
+    @apply [:where(&)]:dark:border-white/10;
+}
+
+[data-obsidian-ui-docs-table] > table
+{
+    @apply [:where(&)]:w-full;
+}
+
+[data-obsidian-ui-docs-table] > table th
+{
+    @apply [:where(&)]:py-1.5;
+    @apply [:where(&)]:px-2;
+    @apply [:where(&)]:text-left;
+    @apply [:where(&)]:border-b;
+    @apply [:where(&)]:border-black/10;
+    @apply [:where(&)]:dark:border-white/10;
+    @apply [:where(&)]:text-[var(--obsidian-base-text-color-highlight)];
+    @apply [:where(&)]:align-top;
+}
+
+[data-obsidian-ui-docs-table] > table td
+{
+    @apply [:where(&)]:py-1.5;
+    @apply [:where(&)]:px-2;
+    @apply [:where(&)]:text-left;
+    @apply [:where(&)]:border-b;
+    @apply [:where(&)]:border-black/10;
+    @apply [:where(&)]:dark:border-white/10;
+    @apply [:where(&)]:align-top;
+}
+
+[data-obsidian-ui-docs-table] > table td.primary
+{
+    @apply [:where(&)]:text-[var(--obsidian-color-primary)];
+}
+
+[data-obsidian-ui-docs-table] > table tr:last-child td
+{
+    @apply [:where(&)]:border-0;
+}

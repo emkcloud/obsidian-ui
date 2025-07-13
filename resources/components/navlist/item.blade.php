@@ -9,8 +9,8 @@
         ->add('hover:border-[var(--obsidian-base-text-color-highlight)]');
 
     $current = ObsidianUI::classes()
-        ->add('text-[var(--obsidian-base-text-color-highlight)]!')
-        ->add('border-[var(--obsidian-base-text-color-highlight)]!');
+        ->add('text-[var(--obsidian-color-primary)]!')
+        ->add('border-[var(--obsidian-color-primary)]!');
 @endphp
 
 {{-- output --}}

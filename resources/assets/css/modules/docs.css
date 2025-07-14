@@ -82,45 +82,37 @@
 
 /* Design CSS for Documentation Table */
 
-[data-obsidian-ui-docs-table]
-{
-    @apply [:where(&)]:pt-3;
-    @apply [:where(&)]:pb-4;
-    @apply [:where(&)]:px-4;
-    @apply [:where(&)]:w-full;
-    @apply [:where(&)]:border;
-    @apply [:where(&)]:rounded-2xl;
-    @apply [:where(&)]:overflow-auto;
-    @apply [:where(&)]:border-black/10;
-    @apply [:where(&)]:dark:border-white/10;
-}
-
 [data-obsidian-ui-docs-table] > table
 {
     @apply [:where(&)]:w-full;
 }
 
+[data-obsidian-ui-docs-table] > table td,
 [data-obsidian-ui-docs-table] > table th
 {
-    @apply [:where(&)]:py-1.5;
-    @apply [:where(&)]:px-2;
+    @apply [:where(&)]:p-3;
     @apply [:where(&)]:text-left;
     @apply [:where(&)]:border-b;
     @apply [:where(&)]:border-black/10;
     @apply [:where(&)]:dark:border-white/10;
-    @apply [:where(&)]:text-[var(--obsidian-base-text-color-highlight)];
-    @apply [:where(&)]:align-middle;
+    @apply [:where(&)]:align-top;
 }
 
-[data-obsidian-ui-docs-table] > table td
+[data-obsidian-ui-docs-table] > table th
 {
-    @apply [:where(&)]:py-1.5;
-    @apply [:where(&)]:px-2;
-    @apply [:where(&)]:text-left;
-    @apply [:where(&)]:border-b;
-    @apply [:where(&)]:border-black/10;
-    @apply [:where(&)]:dark:border-white/10;
-    @apply [:where(&)]:align-middle;
+    @apply [:where(&)]:text-[var(--obsidian-base-text-color-highlight)];
+}
+
+[data-obsidian-ui-docs-table] > table td:first-child,
+[data-obsidian-ui-docs-table] > table th:first-child
+{
+    @apply [:where(&)]:pl-0;
+}
+
+[data-obsidian-ui-docs-table] > table td:last-child,
+[data-obsidian-ui-docs-table] > table th:last-child
+{
+    @apply [:where(&)]:pr-0;
 }
 
 [data-obsidian-ui-docs-table] > table td.primary
@@ -129,8 +121,16 @@
     @apply [:where(&)]:text-[var(--obsidian-color-primary)];
 }
 
-[data-obsidian-ui-docs-table] > table tr:last-child td
+[data-obsidian-ui-docs-table] > table tr:first-child td,
+[data-obsidian-ui-docs-table] > table tr:first-child th
 {
+    @apply [:where(&)]:pt-0;
+}
+
+[data-obsidian-ui-docs-table] > table tr:last-child td,
+[data-obsidian-ui-docs-table] > table tr:last-child th
+{
+    @apply [:where(&)]:pb-0;
     @apply [:where(&)]:border-0;
 }
 

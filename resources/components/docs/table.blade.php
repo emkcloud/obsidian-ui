@@ -1,6 +1,6 @@
 {{-- classes --}}
 
-@php $classes = ObsidianUI::classes('[:where(&)]:my-6'); @endphp
+@php $classes = ObsidianUI::classes(); @endphp
 
 {{-- output --}}
 

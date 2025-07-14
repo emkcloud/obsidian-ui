@@ -4,8 +4,6 @@ namespace Emkcloud\ObsidianUI\Core;
 
 use Emkcloud\ObsidianUI\Helpers\Code;
 use Emkcloud\ObsidianUI\Helpers\Template;
-use Phiki\Grammar\Grammar;
-use Phiki\Theme\Theme;
 
 class PackageManager
 {
@@ -36,33 +34,18 @@ class PackageManager
             ->add('[:where(&)]:dark:text-[var(--obsidian-white)]/80');
     }
 
-    public function normalizeCodeLanguage(string $language): Grammar
+    public function code(): string
     {
-        return Code::normalizeLanguage($language);
-    }
-
-    public function normalizeCodeTheme(string $theme): Theme
-    {
-        return Code::normalizeTheme($theme);
-    }
-
-    public function normalizeLayout(string $layout): string
-    {
-        return Template::normalizeLayout($layout);
-    }
-
-    public function normalizePalette(string $palette): string
-    {
-        return Template::normalizePalette($palette);
-    }
-
-    public function normalizeSidebars(string $sidebars): string
-    {
-        return Template::normalizeSidebars($sidebars);
+        return Code::class;
     }
 
     public function scripts($options = [])
     {
         return AssetManager::scripts($options);
+    }
+
+    public function template(): string
+    {
+        return Template::class;
     }
 }

@@ -1,7 +1,40 @@
-[data-obsidian-ui-docs-section] > p
+/* Design CSS for Documentation Paragraph */
+
+[data-obsidian-ui-docs-section] > p,
+[data-obsidian-ui-docs-section] > ul,
+[data-obsidian-ui-docs-section] > h1,
+[data-obsidian-ui-docs-section] > h2,
+[data-obsidian-ui-docs-section] > h3
 {
     @apply mb-4;
 }
+
+/* Design CSS for Documentation Heading */
+
+[data-obsidian-ui-docs-section] > h1,
+[data-obsidian-ui-docs-section] > h2,
+[data-obsidian-ui-docs-section] > h3
+{
+    @apply font-semibold;
+    @apply text-[var(--obsidian-base-text-color-highlight)];
+}
+
+[data-obsidian-ui-docs-section] > h1
+{
+    @apply [:where(&)]:text-3xl;
+}
+
+[data-obsidian-ui-docs-section] > h2
+{
+    @apply [:where(&)]:text-2xl;
+}
+
+[data-obsidian-ui-docs-section] > h3
+{
+    @apply [:where(&)]:text-xl;
+}
+
+/* Design CSS for Documentation Link */
 
 [data-obsidian-ui-docs-section] > p a
 {
@@ -26,16 +59,34 @@
     @apply dark:bg-[var(--obsidian-color-base-700)];
 }
 
+/* Design CSS for Documentation List */
+
+[data-obsidian-ui-docs-section] > ul
+{
+    @apply list-disc;
+    @apply list-outside;
+    @apply pl-[1em];
+}
+
+[data-obsidian-ui-docs-section] > ul > li
+{
+    @apply pb-2;
+}
+
+/* Design CSS for Documentation Code */
+
 [data-obsidian-ui-docs-code] > pre
 {
     @apply bg-transparent!;
 }
 
+/* Design CSS for Documentation Table */
+
 [data-obsidian-ui-docs-table]
 {
-    @apply [:where(&)]:pt-1;
-    @apply [:where(&)]:pb-2;
-    @apply [:where(&)]:px-2;
+    @apply [:where(&)]:pt-3;
+    @apply [:where(&)]:pb-4;
+    @apply [:where(&)]:px-4;
     @apply [:where(&)]:w-full;
     @apply [:where(&)]:border;
     @apply [:where(&)]:rounded-2xl;
@@ -58,7 +109,7 @@
     @apply [:where(&)]:border-black/10;
     @apply [:where(&)]:dark:border-white/10;
     @apply [:where(&)]:text-[var(--obsidian-base-text-color-highlight)];
-    @apply [:where(&)]:align-top;
+    @apply [:where(&)]:align-middle;
 }
 
 [data-obsidian-ui-docs-table] > table td
@@ -69,15 +120,42 @@
     @apply [:where(&)]:border-b;
     @apply [:where(&)]:border-black/10;
     @apply [:where(&)]:dark:border-white/10;
-    @apply [:where(&)]:align-top;
+    @apply [:where(&)]:align-middle;
 }
 
 [data-obsidian-ui-docs-table] > table td.primary
 {
+    @apply [:where(&)]:font-semibold;
     @apply [:where(&)]:text-[var(--obsidian-color-primary)];
 }
 
 [data-obsidian-ui-docs-table] > table tr:last-child td
 {
     @apply [:where(&)]:border-0;
+}
+
+/* Design CSS for Documentation Pattern */
+
+.obsidian-ui-docs-pattern
+{
+    @apply bg-[size:10px_10px];
+    @apply bg-[image:repeating-linear-gradient(315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)];
+    @apply [--pattern-fg:var(--obsidian-color-base-950)]/5;
+    @apply dark:[--pattern-fg:var(--color-white)]/10;
+}
+
+.obsidian-ui-docs-pattern-alt
+{
+    @apply bg-[size:20px_20px];
+    @apply bg-[image:repeating-linear-gradient(-315deg,_var(--pattern-fg)_0,_var(--pattern-fg)_1px,_transparent_0,_transparent_50%)];
+    @apply [--pattern-fg:var(--obsidian-color-base-950)]/5;
+    @apply dark:[--pattern-fg:var(--color-white)]/10;
+}
+
+.obsidian-ui-docs-pattern-point
+{
+    @apply bg-[size:20px_20px];
+    @apply [background-image:radial-gradient(circle,_var(--pattern-fg)_2px,_transparent_0)];
+    @apply [--pattern-fg:var(--obsidian-color-base-950)]/5;
+    @apply dark:[--pattern-fg:var(--color-white)]/10;
 }

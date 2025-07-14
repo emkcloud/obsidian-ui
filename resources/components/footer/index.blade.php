@@ -2,6 +2,7 @@
 
 @php
     $classes = ObsidianUI::classes('[grid-area:footer]')
+        ->add('[:where(&)]:py-6')
         ->add('[:where(&)]:border-t')
         ->add('[:where(&)]:text-[var(--obsidian-base-text-color)]')
         ->add('[:where(&)]:bg-[var(--obsidian-base-background-color)]')

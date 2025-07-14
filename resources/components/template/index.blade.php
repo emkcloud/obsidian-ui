@@ -1,21 +1,17 @@
-@use('Emkcloud\ObsidianUI\Enums\Layout')
-@use('Emkcloud\ObsidianUI\Enums\Palette')
-@use('Emkcloud\ObsidianUI\Enums\Sidebars')
-
 {{-- setting --}}
 
 @props([
-    'layout'   => Layout::LEONARDO,
-    'palette'  => Palette::MINIMAL,
-    'sidebars' => Sidebars::STANDARD,
+    'layout'   => config('obsidian-ui.template.layout'),
+    'palette'  => config('obsidian-ui.template.palette'),
+    'sidebars' => config('obsidian-ui.template.sidebars'),
 ])
 
 {{-- normalize --}}
 
 @php 
-    $layout   = ObsidianUI::normalizeLayout($layout);
-    $palette  = ObsidianUI::normalizePalette($palette);
-    $sidebars = ObsidianUI::normalizeSidebars($sidebars);
+    $layout   = ObsidianUI::template()::normalizeLayout($layout);
+    $palette  = ObsidianUI::template()::normalizePalette($palette);
+    $sidebars = ObsidianUI::template()::normalizeSidebars($sidebars);
 @endphp
 
 {{-- classes --}}

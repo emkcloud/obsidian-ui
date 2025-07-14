@@ -41,10 +41,25 @@ class PackageServiceProvider extends ServiceProvider
 
     public function register(): void
     {
+        $this->registerConfig();
+        $this->registerBinding();
+    }
+
+    protected function registerBinding()
+    {
         $this->app->alias(PackageManager::class, 'obsidian-ui');
 
         $this->app->singleton(PackageManager::class);
 
         AliasLoader::getInstance()->alias('ObsidianUI', ObsidianUI::class);
+    }
+
+    protected function registerConfig()
+    {
+        $config = __DIR__.'/../../config/obsidian-ui.php';
+
+        $this->publishes([$config => config_path('obsidian-ui.php')], ['obsidian-ui', 'obsidian-ui:config']);
+
+        $this->mergeConfigFrom($config, 'obsidian-ui');
     }
 }

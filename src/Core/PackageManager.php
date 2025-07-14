@@ -34,9 +34,9 @@ class PackageManager
             ->add('[:where(&)]:dark:text-[var(--obsidian-white)]/80');
     }
 
-    public function code(): string
+    public function code(): Code
     {
-        return Code::class;
+        return new Code;
     }
 
     public function scripts($options = [])
@@ -44,8 +44,8 @@ class PackageManager
         return AssetManager::scripts($options);
     }
 
-    public function template(): string
+    public function template(): Template
     {
-        return Template::class;
+        return new Template;
     }
 }

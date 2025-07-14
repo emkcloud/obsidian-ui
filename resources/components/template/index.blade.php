@@ -1,32 +1,38 @@
 {{-- setting --}}
 
-@props([
+@props(
+[
     'layout'   => config('obsidian-ui.template.layout'),
     'palette'  => config('obsidian-ui.template.palette'),
     'sidebars' => config('obsidian-ui.template.sidebars'),
 ])
 
-{{-- normalize --}}
+{{-- setting --}}
 
-@php 
-    $layout   = ObsidianUI::template()::normalizeLayout($layout);
-    $palette  = ObsidianUI::template()::normalizePalette($palette);
-    $sidebars = ObsidianUI::template()::normalizeSidebars($sidebars);
+@php
+
+    $template = ObsidianUI::template()
+        ->setLayout($layout)
+        ->setPalette($palette)
+        ->setSidebars($sidebars);
+
+    $layout   = $template->getLayout();
+    $palette  = $template->getPalette();
+    $sidebars = $template->getSidebars();
+
 @endphp
 
 {{-- classes --}}
 
-@php
-    $classes = ObsidianUI::classes('grid group/template');
-@endphp
+@php $classes = ObsidianUI::classes('grid group/template'); @endphp
 
 {{-- output --}}
 
 <div {{ $attributes->class($classes) }} 
+
     data-obsidian-ui-template
     data-obsidian-ui-layout="{{ $layout }}"
     data-obsidian-ui-palette="{{ $palette }}"
     data-obsidian-ui-sidebars="{{ $sidebars }}"
->
-    {{ $slot }}
-</div>
+
+>{{ $slot }}</div>

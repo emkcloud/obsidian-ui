@@ -4,8 +4,7 @@
 
 {{-- classes --}}
 
-@php
-    $classes = ObsidianUI::classes('[grid-area:header]')
+@php $classes = ObsidianUI::classes('[grid-area:header]')
         ->add('[:where(&)]:h-18')
         ->add('[:where(&)]:flex')
         ->add('[:where(&)]:items-center')

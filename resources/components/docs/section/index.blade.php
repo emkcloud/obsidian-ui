@@ -1,6 +1,7 @@
 {{-- setting --}}
 
-@props([
+@props(
+[
     'main'  => false,
     'name'  => '',
     'title' => '',
@@ -20,6 +21,7 @@
 {{-- output --}}
 
 <div id="{{ $name }}" {{ $attributes->class($classes) }}
+
     data-obsidian-ui-docs-section
     data-main="{{ $main }}"
     data-name="{{ $name }}"

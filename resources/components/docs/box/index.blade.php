@@ -1,8 +1,8 @@
-@use('Emkcloud\ObsidianUI\Enums\DocsStackPosition')
+@use('Emkcloud\ObsidianUI\Enums\DocsBoxStacked')
 
 {{-- setting --}}
 
-@props(['stacked' => DocsStackPosition::STANDALONE])
+@props(['stacked' => DocsBoxStacked::defaultValue()])
 
 {{-- classes --}}
 
@@ -20,10 +20,10 @@
 
 @php $classes->add(match($stacked)
 {
-    DocsStackPosition::STANDALONE => '[:where(&)]:my-6',
-    DocsStackPosition::TOP => '[:where(&)]:mt-6 border-b-0 rounded-b-none',
-    DocsStackPosition::MIDDLE => '[:where(&)]:my-0',
-    DocsStackPosition::BOTTOM => '[:where(&)]:mb-6 border-t-0 rounded-t-none',
+    DocsBoxStacked::STANDALONE->value => '[:where(&)]:my-6',
+    DocsBoxStacked::TOP->value => '[:where(&)]:mt-6 border-b-0 rounded-b-none',
+    DocsBoxStacked::MIDDLE->value => '[:where(&)]:my-0',
+    DocsBoxStacked::BOTTOM->value => '[:where(&)]:mb-6 border-t-0 rounded-t-none',
     default => '',
 });
 @endphp

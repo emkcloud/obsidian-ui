@@ -73,13 +73,6 @@
     @apply pb-2;
 }
 
-/* Design CSS for Documentation Code */
-
-[data-obsidian-ui-docs-code] > pre
-{
-    @apply bg-transparent!;
-}
-
 /* Design CSS for Documentation Table */
 
 [data-obsidian-ui-docs-table] > table

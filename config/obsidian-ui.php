@@ -1,9 +1,5 @@
 <?php
 
-use Emkcloud\ObsidianUI\Enums\TemplateLayout;
-use Emkcloud\ObsidianUI\Enums\TemplatePalette;
-use Emkcloud\ObsidianUI\Enums\TemplateSidebars;
-
 return
 [
     /*
@@ -12,10 +8,27 @@ return
     |--------------------------------------------------------------------------
     */
 
-    'template'     =>
+    'template' =>
     [
-        'layout'   => env('OBSIDIAN_UI_LAYOUT',TemplateLayout::LEONARDO->value),
-        'palette'  => env('OBSIDIAN_UI_PALETTE',TemplatePalette::MINIMAL->value),
-        'sidebars' => env('OBSIDIAN_UI_SIDEBARS',TemplateSidebars::STANDARD->value),
+        'layout'   => env('OBSIDIAN_UI_LAYOUT','leonardo'),
+        'palette'  => env('OBSIDIAN_UI_PALETTE','minimal'),
+        'sidebars' => env('OBSIDIAN_UI_SIDEBARS','standard'),
+    ],
+
+    /*
+    |--------------------------------------------------------------------------
+    | Obsidian UI - Code
+    |--------------------------------------------------------------------------
+    */
+
+    'code' =>
+    [
+        'language'  => env('OBSIDIAN_UI_CODE_LANGUAGE','php'),
+
+        'themes'    =>
+        [
+            'light' => env('OBSIDIAN_UI_CODE_THEME_LIGHT','github-light'),
+            'dark'  => env('OBSIDIAN_UI_CODE_THEME_DARK','github-dark'),
+        ]
     ]
 ];

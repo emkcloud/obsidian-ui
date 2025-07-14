@@ -1,7 +1,6 @@
 {{-- classes --}}
 
-@php
-    $classes = ObsidianUI::classes('[grid-area:aside]')
+@php $classes = ObsidianUI::classes('[grid-area:aside]')
         ->add('[:where(&)]:py-8')
         ->add('[:where(&)]:px-6')
         ->add('[:where(&)]:w-70')

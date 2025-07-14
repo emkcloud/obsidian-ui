@@ -9,24 +9,45 @@ use Illuminate\Support\Str;
 
 class Template
 {
-    public static function normalizeLayout(string $layout): string
-    {
-        $layout = Str::lower(Str::trim($layout));
+    private $layout;
 
-        return (in_array($layout, TemplateLayout::values())) ? $layout : TemplateLayout::defaultValue();
+    private $palette;
+
+    private $sidebars;
+
+    public function getLayout(): string
+    {
+        return (in_array($this->layout, TemplateLayout::values())) ? $this->layout : TemplateLayout::defaultValue();
     }
 
-    public static function normalizePalette(string $palette): string
+    public function getPalette(): string
     {
-        $palette = Str::lower(Str::trim($palette));
-
-        return (in_array($palette, TemplatePalette::values())) ? $palette : TemplatePalette::defaultValue();
+        return (in_array($this->palette, TemplatePalette::values())) ? $this->palette : TemplatePalette::defaultValue();
     }
 
-    public static function normalizeSidebars(string $sidebars): string
+    public function getSidebars(): string
     {
-        $sidebars = Str::lower(Str::trim($sidebars));
+        return (in_array($this->sidebars, TemplateSidebars::values())) ? $this->sidebars : TemplateSidebars::defaultValue();
+    }
 
-        return (in_array($sidebars, TemplateSidebars::values())) ? $sidebars : TemplateSidebars::defaultValue();
+    public function setLayout(?string $layout): self
+    {
+        $this->layout = Str::lower(Str::trim($layout));
+
+        return $this;
+    }
+
+    public function setPalette(?string $palette): self
+    {
+        $this->palette = Str::lower(Str::trim($palette));
+
+        return $this;
+    }
+
+    public function setSidebars(?string $sidebars): self
+    {
+        $this->sidebars = Str::lower(Str::trim($sidebars));
+
+        return $this;
     }
 }

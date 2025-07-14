@@ -9,8 +9,11 @@ enum TemplateSidebars: string
     use EnumTrait;
 
     case STANDARD = 'standard';
+
     case INVERTED = 'inverted';
+
     case LEFT = 'left';
+
     case RIGHT = 'right';
 
     public static function default(): self

@@ -19,12 +19,12 @@ class PackageServiceProvider extends ServiceProvider
         $this->bootAssets();
     }
 
-    private function bootAssets()
+    private function bootAssets(): void
     {
         AssetManager::boot();
     }
 
-    private function bootComponents()
+    private function bootComponents(): void
     {
         if (file_exists(resource_path('views/obsidian')))
         {
@@ -34,7 +34,7 @@ class PackageServiceProvider extends ServiceProvider
         Blade::anonymousComponentPath(__DIR__.'/../../resources/components', 'obsidian');
     }
 
-    private function bootViews()
+    private function bootViews(): void
     {
         View::addNamespace('obsidian-ui', __DIR__.'/../../resources/views');
     }
@@ -45,7 +45,7 @@ class PackageServiceProvider extends ServiceProvider
         $this->registerBinding();
     }
 
-    protected function registerBinding()
+    protected function registerBinding(): void
     {
         $this->app->alias(PackageManager::class, 'obsidian-ui');
 
@@ -54,7 +54,7 @@ class PackageServiceProvider extends ServiceProvider
         AliasLoader::getInstance()->alias('ObsidianUI', ObsidianUI::class);
     }
 
-    protected function registerConfig()
+    protected function registerConfig(): void
     {
         $config = __DIR__.'/../../config/obsidian-ui.php';
 

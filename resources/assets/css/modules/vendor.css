@@ -10,8 +10,8 @@ html.dark .phiki span
     text-decoration: var(--phiki-dark-text-decoration) !important;
 }
 
-html.dark [data-obsidian-ui-docs-code] .phiki,
-html.dark [data-obsidian-ui-docs-code] .phiki span
+html.dark [data-obsidian-ui-docs-section] .phiki,
+html.dark [data-obsidian-ui-docs-section] .phiki span
 {
     @apply bg-transparent!;
 }

@@ -8,8 +8,7 @@
 
 {{-- classes --}}
 
-@php
-    $classes = ObsidianUI::classes()
+@php $classes = ObsidianUI::classes()
         ->add('[:where(&)]:mb-6')
         ->add('[:where(&)]:font-semibold')
         ->add('[:where(&)]:text-[var(--obsidian-base-text-color-highlight)]');

@@ -3,6 +3,7 @@
 namespace Emkcloud\ObsidianUI\Core;
 
 use Emkcloud\ObsidianUI\Helpers\Code;
+use Emkcloud\ObsidianUI\Helpers\Table;
 use Emkcloud\ObsidianUI\Helpers\Template;
 
 class PackageManager
@@ -42,6 +43,11 @@ class PackageManager
     public function scripts($options = [])
     {
         return AssetManager::scripts($options);
+    }
+
+    public function table(string $content): Table
+    {
+        return new Table($content);
     }
 
     public function template(): Template

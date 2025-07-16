@@ -108,7 +108,7 @@
     @apply [:where(&)]:pr-0;
 }
 
-[data-obsidian-ui-docs-table] > table td.primary
+[data-obsidian-ui-docs-table] > table td .primary
 {
     @apply [:where(&)]:font-semibold;
     @apply [:where(&)]:text-[var(--obsidian-color-primary)];
@@ -125,6 +125,17 @@
 {
     @apply [:where(&)]:pb-0;
     @apply [:where(&)]:border-0;
+}
+
+[data-obsidian-ui-docs-table] > table td code
+{
+    @apply [:where(&)]:px-2;
+    @apply [:where(&)]:inline-block;
+    @apply [:where(&)]:text-sm;
+    @apply [:where(&)]:align-middle;
+    @apply [:where(&)]:rounded-full;
+    @apply [:where(&)]:bg-[var(--obsidian-color-base-950)]/10;
+    @apply [:where(&)]:dark:bg-[var(--obsidian-color-base)]/15;
 }
 
 /* Design CSS for Documentation Pattern */

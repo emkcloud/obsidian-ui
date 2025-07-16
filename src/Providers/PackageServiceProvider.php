@@ -9,6 +9,7 @@ use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
+use Emkcloud\ObsidianUI\Blade\FileContent;
 
 class PackageServiceProvider extends ServiceProvider
 {
@@ -16,6 +17,7 @@ class PackageServiceProvider extends ServiceProvider
     {
         $this->bootViews();
         $this->bootComponents();
+        $this->bootDirectives();
         $this->bootAssets();
     }
 
@@ -34,8 +36,19 @@ class PackageServiceProvider extends ServiceProvider
         Blade::anonymousComponentPath(__DIR__.'/../../resources/components', 'obsidian');
     }
 
+    private function bootDirectives(): void
+    {
+        Blade::directive('obsidianFileContent', [FileContent::class, 'handle']);
+    }
+
     private function bootViews(): void
     {
+        View::creator('*', function ($view)
+        {
+            $view->with('obsidianCurrentViewName', $view->getName());
+            $view->with('obsidianCurrentViewPath', $view->getPath());
+        });
+
         View::addNamespace('obsidian-ui', __DIR__.'/../../resources/views');
     }
 

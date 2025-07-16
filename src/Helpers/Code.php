@@ -10,13 +10,13 @@ use Phiki\Theme\Theme;
 
 class Code
 {
-    private $language;
-
-    private $themes;
-
     private $filename;
 
+    private $language;
+
     private $stream;
+
+    private $themes;
 
     private $viewname;
 

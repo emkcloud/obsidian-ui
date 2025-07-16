@@ -7,7 +7,6 @@
 @php $classes = ObsidianUI::classes('[grid-area:sidebar]')
         ->add('[:where(&)]:py-8')
         ->add('[:where(&)]:px-6')
-        ->add('[:where(&)]:w-70')
         ->add('[:where(&)]:overflow-y-auto')
         ->add('[:where(&)]:border-r')
         ->add('[:where(&)]:text-[var(--obsidian-base-text-color)]')

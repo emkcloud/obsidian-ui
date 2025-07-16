@@ -6,6 +6,7 @@
 
 @php $classes = ObsidianUI::classes('[grid-area:header]')
         ->add('[:where(&)]:h-18')
+        ->add('[:where(&)]:px-6')
         ->add('[:where(&)]:flex')
         ->add('[:where(&)]:items-center')
         ->add('[:where(&)]:border-b')

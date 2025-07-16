@@ -1,113 +1,153 @@
 /* Design CSS for layout Leonardo */
 
+[data-obsidian-ui-layout]
+{
+    grid-template-columns:
+        minmax(0, min(20%, 18rem)) 1fr
+        minmax(0, min(20%, 18rem));
+    
+    @apply grid-rows-[auto_1fr_auto];
+}
+
 [data-obsidian-ui-layout="leonardo"]
 {
-    grid-template:
+    grid-template-areas:
         'header header header'
-        'sidebar main aside' 1fr
-        'footer footer footer'
-        / min-content minmax(0, 1fr) min-content;
+        'sidebar main aside'
+        'footer footer footer';
 }
 
 [data-obsidian-ui-layout="leonardo"][data-obsidian-ui-sidebars="inverted"]
 {
-    grid-template:
+    grid-template-areas:
         'header header header'
-        'aside main sidebar' 1fr
-        'footer footer footer'
-        / min-content minmax(0, 1fr) min-content;
+        'aside main sidebar'
+        'footer footer footer';
 }
 
 [data-obsidian-ui-layout="leonardo"][data-obsidian-ui-sidebars="left"]
 {
-    grid-template:
+    grid-template-areas:
         'header header header'
-        'sidebar aside main' 1fr
-        'footer footer footer'
-        / min-content min-content minmax(0, 1fr);
+        'sidebar aside main'
+        'footer footer footer';
 }
 
 [data-obsidian-ui-layout="leonardo"][data-obsidian-ui-sidebars="right"]
 {
-    grid-template:
+    grid-template-areas:
         'header header header'
-        'main aside sidebar' 1fr
-        'footer footer footer'
-        / minmax(0, 1fr) min-content min-content;
+        'main aside sidebar'
+        'footer footer footer';
 }
 
 /* Design CSS for layout Michelangelo */
 
 [data-obsidian-ui-layout="michelangelo"]
 {
-    grid-template:
+    grid-template-areas:
         'header header header'
-        'sidebar main aside' 1fr
-        'sidebar footer aside'
-        / min-content minmax(0, 1fr) min-content;
+        'sidebar main aside'
+        'sidebar footer aside';
 }
 
 [data-obsidian-ui-layout="michelangelo"][data-obsidian-ui-sidebars="inverted"]
 {
-    grid-template:
+    grid-template-areas:
         'header header header'
-        'aside main sidebar' 1fr
-        'aside footer sidebar'
-        / min-content minmax(0, 1fr) min-content;
+        'aside main sidebar'
+        'aside footer sidebar';
 }
 
 [data-obsidian-ui-layout="michelangelo"][data-obsidian-ui-sidebars="left"]
 {
-    grid-template:
+    grid-template-areas:
         'header header header'
-        'sidebar aside main' 1fr
-        'sidebar aside footer'
-        / min-content min-content minmax(0, 1fr);
+        'sidebar aside main'
+        'sidebar aside footer';
 }
 
 [data-obsidian-ui-layout="michelangelo"][data-obsidian-ui-sidebars="right"]
 {
-    grid-template:
+    grid-template-areas:
         'header header header'
-        'main aside sidebar' 1fr
-        'footer aside sidebar'
-        / minmax(0, 1fr) min-content min-content;
+        'main aside sidebar'
+        'footer aside sidebar';
 }
 
 /* Design CSS for layout Raffaello */
 
 [data-obsidian-ui-layout="raffaello"]
 {
-    grid-template:
+    grid-template-areas:
         'sidebar header aside'
-        'sidebar main aside' 1fr
-        'sidebar footer aside'
-        / min-content minmax(0, 1fr) min-content;
+        'sidebar main aside'
+        'sidebar footer aside';
 }
 
 [data-obsidian-ui-layout="raffaello"][data-obsidian-ui-sidebars="inverted"]
 {
-    grid-template:
+    grid-template-areas:
         'aside header sidebar'
-        'aside main sidebar' 1fr
-        'aside footer sidebar'
-        / min-content minmax(0, 1fr) min-content;
+        'aside main sidebar'
+        'aside footer sidebar';
 }
 
 [data-obsidian-ui-layout="raffaello"][data-obsidian-ui-sidebars="left"]
 {
-    grid-template:
+    grid-template-areas:
         'sidebar aside header'
-        'sidebar aside main' 1fr
-        'sidebar aside footer'
-        / min-content min-content minmax(0, 1fr);
+        'sidebar aside main'
+        'sidebar aside footer';
 }
 
 [data-obsidian-ui-layout="raffaello"][data-obsidian-ui-sidebars="right"]
 {
-    grid-template:
+    grid-template-areas:
         'header aside sidebar'
-        'main aside sidebar' 1fr
-        'footer aside sidebar'
-        / minmax(0, 1fr) min-content min-content;
+        'main aside sidebar'
+        'footer aside sidebar';
+}
+
+/* Design CSS for layout palette */
+
+[data-obsidian-ui-palette="transparent"] > [data-obsidian-ui-header],
+[data-obsidian-ui-palette="transparent"] > [data-obsidian-ui-aside],
+[data-obsidian-ui-palette="transparent"] > [data-obsidian-ui-sidebar],
+[data-obsidian-ui-palette="transparent"] > [data-obsidian-ui-main],
+[data-obsidian-ui-palette="transparent"] > [data-obsidian-ui-footer]
+{
+    @apply [:where(&)]:bg-transparent;
+    @apply [:where(&)]:dark:bg-transparent;
+}
+
+/* Design CSS for layout palette */
+
+[data-obsidian-ui-palette="graceful"] > [data-obsidian-ui-aside],
+[data-obsidian-ui-palette="graceful"] > [data-obsidian-ui-sidebar]
+{
+    @apply [:where(&)]:bg-[var(--obsidian-color-base-50)];
+    @apply [:where(&)]:dark:bg-[var(--obsidian-color-base-950)];
+}
+
+/* Design CSS for layout palette */
+
+[data-obsidian-ui-palette="vibrant"] > [data-obsidian-ui-header],
+[data-obsidian-ui-palette="vibrant"] > [data-obsidian-ui-footer]
+{
+    @apply [:where(&)]:text-[var(--obsidian-color-base-200)];
+    @apply [:where(&)]:bg-[var(--obsidian-color-base-800)];
+    @apply [:where(&)]:dark:bg-[var(--obsidian-color-base-950)];
+}
+
+[data-obsidian-ui-palette="vibrant"] > [data-obsidian-ui-main]
+{
+    @apply [:where(&)]:dark:bg-[var(--obsidian-color-base-800)];
+}
+
+[data-obsidian-ui-palette="vibrant"] > [data-obsidian-ui-aside],
+[data-obsidian-ui-palette="vibrant"] > [data-obsidian-ui-sidebar]
+{
+    @apply [:where(&)]:bg-[var(--obsidian-color-base-50)];
+    @apply [:where(&)]:dark:bg-[var(--obsidian-color-base-900)];
 }

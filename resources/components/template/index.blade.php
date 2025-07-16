@@ -9,12 +9,15 @@
 
 {{-- setting --}}
 
-@php
-
-    $template = ObsidianUI::template()
+@php $template = ObsidianUI::template()
         ->setLayout($layout)
         ->setPalette($palette)
         ->setSidebars($sidebars);
+@endphp
+
+{{-- setting --}}
+
+@php
 
     $layout   = $template->getLayout();
     $palette  = $template->getPalette();

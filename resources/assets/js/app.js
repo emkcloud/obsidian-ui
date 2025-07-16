@@ -7,3 +7,4 @@ import './modules/main.js';
 // features provided by the Alpine JS package.
 
 import './modules/alpine.js';
+import './modules/components.js';

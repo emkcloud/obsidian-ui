@@ -8,16 +8,23 @@ use Emkcloud\ObsidianUI\Helpers\Template;
 
 class PackageManager
 {
-    public function appearance($options = [])
+    public function appearance($options = []): string
     {
         return AssetManager::appearance($options);
     }
 
-    public function classes($styles = null)
+    public function attributes(?string $name = null,?string $value = null): AttributeBuilder
+    {
+        $builder = new AttributeBuilder;
+
+        return $name ? $builder->add($name,$value) : $builder;
+    }
+
+    public function classes($classes = null) : ClassBuilder
     {
         $builder = new ClassBuilder;
 
-        return $styles ? $builder->add($styles) : $builder;
+        return $classes ? $builder->add($classes) : $builder;
     }
 
     public function classesIcon($size)
@@ -40,7 +47,12 @@ class PackageManager
         return new Code;
     }
 
-    public function scripts($options = [])
+    public function isTrue(mixed $value): bool
+    {
+        return (filter_var($value, FILTER_VALIDATE_BOOLEAN));
+    }
+
+    public function scripts($options = []) : string
     {
         return AssetManager::scripts($options);
     }

@@ -7,17 +7,22 @@ use Stringable;
 
 class ClassBuilder implements Stringable
 {
-    protected $pending = [];
+    protected $classes = [];
 
-    public function add($classes)
+    public function add($classes): self
     {
-        $this->pending[] = Arr::toCssClasses($classes);
+        $this->classes[] = Arr::toCssClasses($classes);
 
         return $this;
     }
 
-    public function __toString()
+    public function toArray(): array
     {
-        return (string) collect($this->pending)->join(' ');
+        return $this->classes;
+    }
+
+    public function __toString(): string
+    {
+        return (string) collect($this->classes)->join(' ');
     }
 }

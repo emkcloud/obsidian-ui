@@ -27,7 +27,7 @@
 
 {{-- classes --}}
 
-@php $classes = ObsidianUI::classes('grid group/template'); @endphp
+@php $classes = ObsidianUI::classes('group/template'); @endphp
 
 {{-- output --}}
 

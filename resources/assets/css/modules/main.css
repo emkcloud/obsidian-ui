@@ -1,112 +1,192 @@
-/* Design CSS for layout Leonardo */
+/* Design CSS for layout */
 
 [data-obsidian-ui-layout]
 {
-    grid-template-columns:
-        minmax(0, min(20%, 18rem)) 1fr
-        minmax(0, min(20%, 18rem));
-    
-    @apply grid-rows-[auto_1fr_auto];
+    --obsidian-grid-column-main: 1fr; 
+    --obsidian-grid-column-sidebar: 0; 
+    --obsidian-grid-column-aside: 0; 
+
+    --obsidian-grid-template-rows: auto_1fr_auto;
+
+    --obsidian-grid-template-columns:
+        var(--obsidian-grid-column-sidebar)
+        var(--obsidian-grid-column-main)
+        var(--obsidian-grid-column-aside);
+ 
+    @apply grid;
+    @apply grid-rows-[var(--obsidian-grid-template-rows)];
+    @apply grid-cols-[var(--obsidian-grid-template-columns)];
+
+    grid-template-areas: var(--obsidian-grid-template-areas);
 }
+
+/* Design CSS for layout */
+
+[data-obsidian-ui-layout]:has(>[data-obsidian-ui-aside])
+{
+    --obsidian-grid-column-aside: minmax(0, min(20%, 18rem)); 
+}
+
+[data-obsidian-ui-layout]:has(>[data-obsidian-ui-sidebar])
+{
+    --obsidian-grid-column-sidebar: minmax(0, min(20%, 18rem)); 
+}
+
+/* Design CSS for layout Leonardo */
 
 [data-obsidian-ui-layout="leonardo"]
 {
-    grid-template-areas:
-        'header header header'
-        'sidebar main aside'
-        'footer footer footer';
+    --obsidian-grid-template-areas:
+        'header  header header'
+        'sidebar main   aside'
+        'footer  footer footer';
 }
 
 [data-obsidian-ui-layout="leonardo"][data-obsidian-ui-sidebars="inverted"]
 {
-    grid-template-areas:
+    --obsidian-grid-template-areas:
         'header header header'
-        'aside main sidebar'
+        'aside  main   sidebar'
         'footer footer footer';
+
+    --obsidian-grid-template-columns:
+        var(--obsidian-grid-column-aside)
+        var(--obsidian-grid-column-main)
+        var(--obsidian-grid-column-sidebar);
 }
 
 [data-obsidian-ui-layout="leonardo"][data-obsidian-ui-sidebars="left"]
 {
-    grid-template-areas:
-        'header header header'
-        'sidebar aside main'
-        'footer footer footer';
+    --obsidian-grid-template-areas:
+        'header  header header'
+        'sidebar aside  main'
+        'footer  footer footer';
+
+    --obsidian-grid-template-columns:
+        var(--obsidian-grid-column-sidebar)
+        var(--obsidian-grid-column-aside)
+        var(--obsidian-grid-column-main);
 }
 
 [data-obsidian-ui-layout="leonardo"][data-obsidian-ui-sidebars="right"]
 {
-    grid-template-areas:
+    --obsidian-grid-template-areas:
         'header header header'
-        'main aside sidebar'
+        'main   aside  sidebar'
         'footer footer footer';
+
+    --obsidian-grid-template-columns:
+        var(--obsidian-grid-column-main)
+        var(--obsidian-grid-column-aside)
+        var(--obsidian-grid-column-sidebar);
 }
 
 /* Design CSS for layout Michelangelo */
 
 [data-obsidian-ui-layout="michelangelo"]
 {
-    grid-template-areas:
-        'header header header'
-        'sidebar main aside'
+    --obsidian-grid-template-areas:
+        'header  header header'
+        'sidebar main   aside'
         'sidebar footer aside';
+
+    --obsidian-grid-template-columns:
+        var(--obsidian-grid-column-sidebar)
+        var(--obsidian-grid-column-main)
+        var(--obsidian-grid-column-aside);
 }
 
 [data-obsidian-ui-layout="michelangelo"][data-obsidian-ui-sidebars="inverted"]
 {
-    grid-template-areas:
+    --obsidian-grid-template-areas:
         'header header header'
-        'aside main sidebar'
-        'aside footer sidebar';
+        'aside  main   sidebar'
+        'aside  footer sidebar';
+        
+    --obsidian-grid-template-columns:
+        var(--obsidian-grid-column-aside)
+        var(--obsidian-grid-column-main)
+        var(--obsidian-grid-column-sidebar);
 }
 
 [data-obsidian-ui-layout="michelangelo"][data-obsidian-ui-sidebars="left"]
 {
-    grid-template-areas:
-        'header header header'
-        'sidebar aside main'
-        'sidebar aside footer';
+    --obsidian-grid-template-areas:
+        'header  header header'
+        'sidebar aside  main'
+        'sidebar aside  footer';
+        
+    --obsidian-grid-template-columns:
+        var(--obsidian-grid-column-sidebar)
+        var(--obsidian-grid-column-aside)
+        var(--obsidian-grid-column-main);
 }
 
 [data-obsidian-ui-layout="michelangelo"][data-obsidian-ui-sidebars="right"]
 {
-    grid-template-areas:
+    --obsidian-grid-template-areas:
         'header header header'
-        'main aside sidebar'
-        'footer aside sidebar';
+        'main   aside  sidebar'
+        'footer aside  sidebar';
+        
+    --obsidian-grid-template-columns:
+        var(--obsidian-grid-column-main)
+        var(--obsidian-grid-column-aside)
+        var(--obsidian-grid-column-sidebar);
 }
 
 /* Design CSS for layout Raffaello */
 
 [data-obsidian-ui-layout="raffaello"]
 {
-    grid-template-areas:
+    --obsidian-grid-template-areas:
         'sidebar header aside'
-        'sidebar main aside'
+        'sidebar main   aside'
         'sidebar footer aside';
+
+    --obsidian-grid-template-columns:
+        var(--obsidian-grid-column-sidebar)
+        var(--obsidian-grid-column-main)
+        var(--obsidian-grid-column-aside);
 }
 
 [data-obsidian-ui-layout="raffaello"][data-obsidian-ui-sidebars="inverted"]
 {
-    grid-template-areas:
+    --obsidian-grid-template-areas:
         'aside header sidebar'
-        'aside main sidebar'
+        'aside main   sidebar'
         'aside footer sidebar';
+        
+    --obsidian-grid-template-columns:
+        var(--obsidian-grid-column-aside)
+        var(--obsidian-grid-column-main)
+        var(--obsidian-grid-column-sidebar);
 }
 
 [data-obsidian-ui-layout="raffaello"][data-obsidian-ui-sidebars="left"]
 {
-    grid-template-areas:
+    --obsidian-grid-template-areas:
         'sidebar aside header'
         'sidebar aside main'
         'sidebar aside footer';
+    
+    --obsidian-grid-template-columns:
+        var(--obsidian-grid-column-sidebar)
+        var(--obsidian-grid-column-aside)
+        var(--obsidian-grid-column-main);
 }
 
 [data-obsidian-ui-layout="raffaello"][data-obsidian-ui-sidebars="right"]
 {
-    grid-template-areas:
+    --obsidian-grid-template-areas:
         'header aside sidebar'
-        'main aside sidebar'
+        'main   aside sidebar'
         'footer aside sidebar';
+
+    --obsidian-grid-template-columns:
+        var(--obsidian-grid-column-main)
+        var(--obsidian-grid-column-aside)
+        var(--obsidian-grid-column-sidebar);
 }
 
 /* Design CSS for layout palette */
@@ -150,4 +230,23 @@
 {
     @apply [:where(&)]:bg-[var(--obsidian-color-base-50)];
     @apply [:where(&)]:dark:bg-[var(--obsidian-color-base-900)];
+}
+
+/* Design CSS for layout header */
+
+[data-obsidian-ui-header-container="false"]
+{
+    @apply [:where(&)]:flex;
+    @apply [:where(&)]:px-6;
+}
+
+[data-obsidian-ui-header-container="true"]
+{
+    @apply grid;    
+    @apply grid-cols-[var(--obsidian-grid-template-columns)];
+}
+
+[data-obsidian-ui-header-container="true"] > div
+{
+    @apply [:where(&)]:px-6;
 }

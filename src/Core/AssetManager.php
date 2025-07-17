@@ -43,14 +43,14 @@ class AssetManager
         return isset($options) && isset($options['nonce']) ? ' nonce="'.$options['nonce'].'"' : '';
     }
 
-    public static function appearance($options = []) : string
+    public static function appearance($options = []): string
     {
         $nonce = self::assetsNonce($options);
 
         return view('obsidian-ui::assets.appearance')->with('nonce', $nonce)->render();
     }
 
-    public static function scripts($options = []) : string
+    public static function scripts($options = []): string
     {
         $nonce = self::assetsNonce($options);
 

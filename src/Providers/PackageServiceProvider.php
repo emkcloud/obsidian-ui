@@ -2,6 +2,7 @@
 
 namespace Emkcloud\ObsidianUI\Providers;
 
+use Emkcloud\ObsidianUI\Blade\FileContent;
 use Emkcloud\ObsidianUI\Core\AssetManager;
 use Emkcloud\ObsidianUI\Core\PackageManager;
 use Emkcloud\ObsidianUI\Facades\ObsidianUI;
@@ -9,7 +10,6 @@ use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
-use Emkcloud\ObsidianUI\Blade\FileContent;
 
 class PackageServiceProvider extends ServiceProvider
 {

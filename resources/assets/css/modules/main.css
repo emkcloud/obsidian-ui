@@ -6,7 +6,7 @@
     --obsidian-grid-column-sidebar: 0; 
     --obsidian-grid-column-aside: 0; 
 
-    --obsidian-grid-template-rows: auto_1fr_auto;
+    --obsidian-grid-template-rows: auto 1fr auto;
 
     --obsidian-grid-template-columns:
         var(--obsidian-grid-column-sidebar)
@@ -191,11 +191,11 @@
 
 /* Design CSS for layout palette */
 
-[data-obsidian-ui-palette="transparent"] > [data-obsidian-ui-header],
-[data-obsidian-ui-palette="transparent"] > [data-obsidian-ui-aside],
-[data-obsidian-ui-palette="transparent"] > [data-obsidian-ui-sidebar],
-[data-obsidian-ui-palette="transparent"] > [data-obsidian-ui-main],
-[data-obsidian-ui-palette="transparent"] > [data-obsidian-ui-footer]
+[data-obsidian-ui-layout][data-obsidian-ui-palette="transparent"] > [data-obsidian-ui-header],
+[data-obsidian-ui-layout][data-obsidian-ui-palette="transparent"] > [data-obsidian-ui-aside],
+[data-obsidian-ui-layout][data-obsidian-ui-palette="transparent"] > [data-obsidian-ui-sidebar],
+[data-obsidian-ui-layout][data-obsidian-ui-palette="transparent"] > [data-obsidian-ui-main],
+[data-obsidian-ui-layout][data-obsidian-ui-palette="transparent"] > [data-obsidian-ui-footer]
 {
     @apply [:where(&)]:bg-transparent;
     @apply [:where(&)]:dark:bg-transparent;
@@ -203,8 +203,8 @@
 
 /* Design CSS for layout palette */
 
-[data-obsidian-ui-palette="graceful"] > [data-obsidian-ui-aside],
-[data-obsidian-ui-palette="graceful"] > [data-obsidian-ui-sidebar]
+[data-obsidian-ui-layout][data-obsidian-ui-palette="graceful"] > [data-obsidian-ui-aside],
+[data-obsidian-ui-layout][data-obsidian-ui-palette="graceful"] > [data-obsidian-ui-sidebar]
 {
     @apply [:where(&)]:bg-[var(--obsidian-color-base-50)];
     @apply [:where(&)]:dark:bg-[var(--obsidian-color-base-950)];
@@ -212,41 +212,53 @@
 
 /* Design CSS for layout palette */
 
-[data-obsidian-ui-palette="vibrant"] > [data-obsidian-ui-header],
-[data-obsidian-ui-palette="vibrant"] > [data-obsidian-ui-footer]
+[data-obsidian-ui-layout][data-obsidian-ui-palette="vibrant"] > [data-obsidian-ui-header],
+[data-obsidian-ui-layout][data-obsidian-ui-palette="vibrant"] > [data-obsidian-ui-footer]
 {
     @apply [:where(&)]:text-[var(--obsidian-color-base-200)];
     @apply [:where(&)]:bg-[var(--obsidian-color-base-800)];
     @apply [:where(&)]:dark:bg-[var(--obsidian-color-base-950)];
 }
 
-[data-obsidian-ui-palette="vibrant"] > [data-obsidian-ui-main]
+[data-obsidian-ui-layout][data-obsidian-ui-palette="vibrant"] > [data-obsidian-ui-main]
 {
     @apply [:where(&)]:dark:bg-[var(--obsidian-color-base-800)];
 }
 
-[data-obsidian-ui-palette="vibrant"] > [data-obsidian-ui-aside],
-[data-obsidian-ui-palette="vibrant"] > [data-obsidian-ui-sidebar]
+[data-obsidian-ui-layout][data-obsidian-ui-palette="vibrant"] > [data-obsidian-ui-aside],
+[data-obsidian-ui-layout][data-obsidian-ui-palette="vibrant"] > [data-obsidian-ui-sidebar]
 {
     @apply [:where(&)]:bg-[var(--obsidian-color-base-50)];
     @apply [:where(&)]:dark:bg-[var(--obsidian-color-base-900)];
 }
 
-/* Design CSS for layout header */
+/* Design CSS for layout component header */
 
-[data-obsidian-ui-header-container="false"]
+[data-obsidian-ui-header][data-obsidian-ui-header-container="false"]
 {
     @apply [:where(&)]:flex;
     @apply [:where(&)]:px-6;
 }
 
-[data-obsidian-ui-header-container="true"]
+[data-obsidian-ui-header][data-obsidian-ui-header-container="true"]
 {
     @apply grid;    
     @apply grid-cols-[var(--obsidian-grid-template-columns)];
 }
 
-[data-obsidian-ui-header-container="true"] > div
+[data-obsidian-ui-header][data-obsidian-ui-header-container="true"] > div
 {
     @apply [:where(&)]:px-6;
+}
+
+/* Design CSS for component main anchor link */
+
+[data-obsidian-ui-main] [id]
+{
+    @apply [:where(&)]:scroll-mt-26;
+}
+
+[data-obsidian-ui-main] [data-obsidian-ui-header]
+{
+    @apply [:where(&)]:z-20;
 }

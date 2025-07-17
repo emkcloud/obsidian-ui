@@ -18,7 +18,8 @@
     if (ObsidianUI::isTrue($sticky))
     {
         $classes->add('[:where(&)]:sticky');
-        $classes->add('[:where(&)]:top-0');
+        $classes->add('[:where(&)]:top-[var(--obsidian-utility-header-height)]');
+        $classes->add('[:where(&)]:h-[calc(100dvh_-_var(--obsidian-utility-header-height))]');
     }
 
     if (ObsidianUI::isTrue($border))

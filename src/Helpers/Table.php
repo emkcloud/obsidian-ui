@@ -52,9 +52,9 @@ class Table
     {
         $this->structure = [];
 
-        foreach (explode(PHP_EOL,$this->content) as $key => $line)
+        foreach (explode(PHP_EOL, $this->content) as $key => $line)
         {
-            foreach (str_getcsv($line,'|') as $value)
+            foreach (str_getcsv($line, '|') as $value)
             {
                 $this->structure[$key][] = Str::squish($value);
             }
@@ -113,7 +113,7 @@ class Table
         {
             return implode(' ', array_map(function ($item)
             {
-                return sprintf('<code>%s</code>',Str::trim($item));
+                return sprintf('<code>%s</code>', Str::trim($item));
 
             }, explode(',', $matches[1])));
 
@@ -129,7 +129,7 @@ class Table
     {
         return preg_replace_callback('/(?<!\S)\*([^\s*][^*\n]*[^\s*])\*(?!\S)/', function ($matches)
         {
-            return sprintf('<span class="primary">%s</span>',Str::trim($matches[1]));
+            return sprintf('<span class="primary">%s</span>', Str::trim($matches[1]));
 
         }, $value);
     }

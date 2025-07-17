@@ -14,6 +14,20 @@
 @empty($name ) @php $name  = Str::slug($label); @endphp @endempty
 @empty($name ) @php $name  = Str::uuid()      ; @endphp @endempty
 
+{{-- setting --}}
+
+@php
+
+    ObsidianUI::section()->add(
+    [
+        'main'  => $main,
+        'title' => $title,
+        'label' => $label,
+        'name'  => $name,
+    ]);
+
+@endphp
+
 {{-- classes --}}
 
 @php $classes = ObsidianUI::classes('[:where(&)]:mb-8'); @endphp

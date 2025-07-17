@@ -3,6 +3,7 @@
 namespace Emkcloud\ObsidianUI\Core;
 
 use Emkcloud\ObsidianUI\Helpers\Code;
+use Emkcloud\ObsidianUI\Helpers\Section;
 use Emkcloud\ObsidianUI\Helpers\Table;
 use Emkcloud\ObsidianUI\Helpers\Template;
 
@@ -13,14 +14,14 @@ class PackageManager
         return AssetManager::appearance($options);
     }
 
-    public function attributes(?string $name = null,?string $value = null): AttributeBuilder
+    public function attributes(?string $name = null, ?string $value = null): AttributeBuilder
     {
         $builder = new AttributeBuilder;
 
-        return $name ? $builder->add($name,$value) : $builder;
+        return $name ? $builder->add($name, $value) : $builder;
     }
 
-    public function classes($classes = null) : ClassBuilder
+    public function classes($classes = null): ClassBuilder
     {
         $builder = new ClassBuilder;
 
@@ -49,10 +50,15 @@ class PackageManager
 
     public function isTrue(mixed $value): bool
     {
-        return (filter_var($value, FILTER_VALIDATE_BOOLEAN));
+        return filter_var($value, FILTER_VALIDATE_BOOLEAN);
     }
 
-    public function scripts($options = []) : string
+    public function section(): Section
+    {
+        return Section::start();
+    }
+
+    public function scripts($options = []): string
     {
         return AssetManager::scripts($options);
     }

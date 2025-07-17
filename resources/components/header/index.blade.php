@@ -11,7 +11,7 @@
 {{-- classes --}}
 
 @php $classes = ObsidianUI::classes('[grid-area:header]')
-        ->add('[:where(&)]:z-20')
+        ->add('[:where(&)]:z-30')
         ->add('[:where(&)]:h-18')
         ->add('[:where(&)]:items-center')
         ->add('[:where(&)]:text-[var(--obsidian-base-text-color)]');
@@ -44,6 +44,6 @@
 
 {{-- output --}}
 
-<header {{ $attributes->class($classes)->merge($attrs->toArray()) }} data-obsidian-ui-header>
+<header x-data="obsidianui_header" {{ $attributes->class($classes)->merge($attrs->toArray()) }} data-obsidian-ui-header>
     {{ $slot }}
 </header>

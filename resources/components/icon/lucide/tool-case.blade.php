@@ -4,7 +4,7 @@
 
 {{-- output --}}
 
-<svg xmlns="http://www.w3.org/2000/svg"
+<svg data-obsidian-ui-icon
     width="24"
     height="24"
     fill="none"
@@ -14,8 +14,7 @@
     stroke-linecap="round"
     stroke-linejoin="round"
     aria-hidden="true"
-    data-obsidian-ui-icon
-    {{ $attributes->class(ObsidianUI::classesIcon($size)) }}
+    {{ $attributes->class(ObsidianUI::icon()->classes($size)) }}
 >
     <path d="M10 15h4" />
     <path d="m14.817 10.995-.971-1.45 1.034-1.232a2 2 0 0 0-2.025-3.238l-1.82.364L9.91 3.885a2 2 0 0 0-3.625.748L6.141 6.55l-1.725.426a2 2 0 0 0-.19 3.756l.657.27" />

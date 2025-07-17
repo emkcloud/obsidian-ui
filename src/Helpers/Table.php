@@ -84,6 +84,7 @@ class Table
         $value = $this->normalizeTextHtml($value);
         $value = $this->normalizeTextCode($value);
         $value = $this->normalizeTextPrimary($value);
+        $value = $this->normalizeTextHref($value);
 
         return $value;
     }
@@ -123,6 +124,12 @@ class Table
     private function normalizeTextHtml(string $value): string
     {
         return htmlspecialchars($value);
+    }
+
+    private function normalizeTextHref(string $value): string
+    {
+        return preg_replace('/\b(?:https?:\/\/|ftp:\/\/)[\w\-\.]+\.[A-Za-z]{2,}(?:\/\S*)?\b/',
+            '<a href="$0">$0</a>',$value);
     }
 
     private function normalizeTextPrimary(string $value): string

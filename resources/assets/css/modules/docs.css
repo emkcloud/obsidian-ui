@@ -6,7 +6,7 @@
 [data-obsidian-ui-docs-section] > h2,
 [data-obsidian-ui-docs-section] > h3
 {
-    @apply mb-4;
+    @apply [:where(&)]:mb-4;
 }
 
 /* Design CSS for Documentation Heading */
@@ -15,8 +15,8 @@
 [data-obsidian-ui-docs-section] > h2,
 [data-obsidian-ui-docs-section] > h3
 {
-    @apply font-semibold;
-    @apply text-[var(--obsidian-base-text-color-highlight)];
+    @apply [:where(&)]:font-semibold;
+    @apply [:where(&)]:text-[var(--obsidian-base-text-color-highlight)];
 }
 
 [data-obsidian-ui-docs-section] > h1
@@ -36,26 +36,27 @@
 
 /* Design CSS for Documentation Link */
 
-[data-obsidian-ui-docs-section] > p a
+[data-obsidian-ui-docs-section] a
 {
-    @apply underline;
-    @apply underline-offset-6;
-    @apply decoration-1;
-    @apply hover:text-[var(--obsidian-base-text-color-highlight)];
+    @apply hover:underline;
+    @apply [:where(&)]:underline-offset-6;
+    @apply [:where(&)]:text-[var(--obsidian-color-primary)];
 }
+
+/* Design CSS for Documentation Code */
 
 [data-obsidian-ui-docs-section] > p code
 {
-    @apply px-2;
-    @apply py-0.5;
-    @apply inline-flex;
-    @apply items-center;
-    @apply leading-none;
-    @apply font-mono;
-    @apply rounded-md;
-    @apply align-middle;
-    @apply text-[var(--obsidian-base-text-color-highlight)];
-    @apply bg-[var(--obsidian-color-base-100)];
+    @apply [:where(&)]:px-2;
+    @apply [:where(&)]:py-0.5;
+    @apply [:where(&)]:inline-flex;
+    @apply [:where(&)]:items-center;
+    @apply [:where(&)]:leading-none;
+    @apply [:where(&)]:font-mono;
+    @apply [:where(&)]:rounded-md;
+    @apply [:where(&)]:align-middle;
+    @apply [:where(&)]:text-[var(--obsidian-base-text-color-highlight)];
+    @apply [:where(&)]:bg-[var(--obsidian-color-base-100)];
     @apply dark:bg-[var(--obsidian-color-base-700)];
 }
 

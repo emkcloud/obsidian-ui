@@ -5,7 +5,7 @@
 {{-- output --}}
 
 <svg data-obsidian-ui-icon
-    {{ $attributes->class(ObsidianUI::classesIcon($size)) }}
+    {{ $attributes->class(ObsidianUI::icon()->classes($size)) }}
   xmlns="http://www.w3.org/2000/svg"
   width="24"
   height="24"

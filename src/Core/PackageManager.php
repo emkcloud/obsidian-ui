@@ -3,6 +3,7 @@
 namespace Emkcloud\ObsidianUI\Core;
 
 use Emkcloud\ObsidianUI\Helpers\Code;
+use Emkcloud\ObsidianUI\Helpers\Icon;
 use Emkcloud\ObsidianUI\Helpers\Section;
 use Emkcloud\ObsidianUI\Helpers\Table;
 use Emkcloud\ObsidianUI\Helpers\Template;
@@ -32,13 +33,14 @@ class PackageManager
     {
         return $this->classes('shrink-0')->add(match ($size)
         {
-            'large' => '[:where(&)]:size-8 [:where(&)]:stroke-[1.5]',
-            'standard' => '[:where(&)]:size-6 [:where(&)]:stroke-[2.0]',
-            'small' => '[:where(&)]:size-5 [:where(&)]:stroke-[2.4]',
             'micro' => '[:where(&)]:size-4 [:where(&)]:stroke-[3.0]',
+            'small' => '[:where(&)]:size-5 [:where(&)]:stroke-[2.4]',
+            'standard' => '[:where(&)]:size-6 [:where(&)]:stroke-[2.0]',
+            'large' => '[:where(&)]:size-8 [:where(&)]:stroke-[1.5]',
             'full' => '[:where(&)]:size-full [:where(&)]:stroke-[1.0]',
             default => '[:where(&)]:size-6 [:where(&)]:stroke-[2.0]',
         })
+            ->add('[:where(&)]:inline-block')
             ->add('[:where(&)]:text-[var(--obsidian-color-800)]')
             ->add('[:where(&)]:dark:text-[var(--obsidian-white)]/80');
     }
@@ -46,6 +48,11 @@ class PackageManager
     public function code(): Code
     {
         return new Code;
+    }
+
+    public function icon(): Icon
+    {
+        return new Icon;
     }
 
     public function isTrue(mixed $value): bool

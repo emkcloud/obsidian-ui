@@ -2,7 +2,6 @@
 
 @props(
 [
-    'main'  => false,
     'title' => '',
     'label' => '',
 ])
@@ -14,13 +13,8 @@
 
 {{-- setting --}}
 
-@php $heading = $main ? 'h1' : 'h2'; @endphp
-
-{{-- setting --}}
-
-@php ObsidianUI::section()->title(
+@php ObsidianUI::section()->subtitle(
 [
-    'main'  => $main,
     'title' => $title,
     'label' => $label,
     'name'  => $name,
@@ -31,20 +25,13 @@
 
 @php $classes = ObsidianUI::classes()
         ->add('[:where(&)]:mb-6')
+        ->add('[:where(&)]:text-xl')
         ->add('[:where(&)]:font-semibold')
         ->add('[:where(&)]:text-[var(--obsidian-base-text-color-highlight)]');
 @endphp
 
-{{-- classes --}}
-
-@unless ($main)
-    @php $classes->add('[:where(&)]:text-2xl'); @endphp
-@else
-    @php $classes->add('[:where(&)]:text-3xl'); @endphp
-@endunless
-
 {{-- output --}}
 
-<{{ $heading }} {{ $attributes->class($classes) }} data-obsidian-ui-docs-title>
-    {{ $slot }}
-</{{ $heading }}>
+<h3 id="{{ $name }}" {{ $attributes->class($classes) }} data-obsidian-ui-docs-subtitle>
+    {{ $title }}{{ $slot }}
+</h3>

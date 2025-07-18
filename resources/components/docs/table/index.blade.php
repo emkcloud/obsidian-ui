@@ -1,10 +1,16 @@
+@use('Emkcloud\ObsidianUI\Enums\DocsBoxHeight')
+
+{{-- setting --}}
+
+@props(['height' => DocsBoxHeight::defaultValue()])
+
 {{-- classes --}}
 
 @php $table = ObsidianUI::table($slot); @endphp
 
 {{-- output --}}
 
-<x-obsidian::docs.box>
+<x-obsidian::docs.box :height="$height">
 
     <div {{ $attributes }} data-obsidian-ui-docs-table>
 

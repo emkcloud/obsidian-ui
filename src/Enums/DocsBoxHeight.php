@@ -4,14 +4,14 @@ namespace Emkcloud\ObsidianUI\Enums;
 
 use Emkcloud\ObsidianUI\Traits\EnumTrait;
 
-enum TemplateSidebars: string
+enum DocsBoxHeight: string
 {
     use EnumTrait;
 
     case STANDARD = 'standard';
-    case INVERTED = 'inverted';
-    case LEFT = 'left';
-    case RIGHT = 'right';
+    case SMALL = 'small';
+    case MEDIUM = 'medium';
+    case LARGE = 'large';
 
     public static function default(): self
     {

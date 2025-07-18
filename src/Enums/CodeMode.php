@@ -9,21 +9,20 @@ enum CodeMode: string
 {
     use EnumTrait;
 
-    case L = 'light';
-
-    case D = 'dark';
+    case BASE = 'light';
+    case DARK = 'dark';
 
     public static function default(): self
     {
-        return self::L;
+        return self::BASE;
     }
 
     public static function settings(): array
     {
         return
         [
-            self::L->value => Theme::GithubLight,
-            self::D->value => Theme::GithubDark,
+            self::BASE->value => Theme::GithubLight,
+            self::DARK->value => Theme::GithubDark,
         ];
     }
 }

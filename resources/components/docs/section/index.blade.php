@@ -3,7 +3,6 @@
 @props(
 [
     'main'  => false,
-    'name'  => '',
     'title' => '',
     'label' => '',
 ])
@@ -12,21 +11,10 @@
 
 @empty($label) @php $label = Str::trim($title); @endphp @endempty
 @empty($name ) @php $name  = Str::slug($label); @endphp @endempty
-@empty($name ) @php $name  = Str::uuid()      ; @endphp @endempty
 
 {{-- setting --}}
 
-@php
-
-    ObsidianUI::section()->add(
-    [
-        'main'  => $main,
-        'title' => $title,
-        'label' => $label,
-        'name'  => $name,
-    ]);
-
-@endphp
+@php ObsidianUI::section()->add(); @endphp
 
 {{-- classes --}}
 
@@ -43,7 +31,11 @@
     data-label="{{ $label }}"
 >
     @if ($title)
-        <x-obsidian::docs.title :main=$main>{{ $title }}</x-obsidian::docs.title>
+        <x-obsidian::docs.title 
+            :main=$main
+            :title=$title
+            :label=$label
+        >{{ $title }}</x-obsidian::docs.title>
     @endif
 
     {{ $slot }}

@@ -2,7 +2,9 @@
 
 namespace Emkcloud\ObsidianUI\Helpers;
 
+use Emkcloud\ObsidianUI\Enums\CodeLanguage;
 use Emkcloud\ObsidianUI\Enums\CodeMode;
+use Emkcloud\ObsidianUI\Enums\CodeTheme;
 use Illuminate\Support\Str;
 use Phiki\Grammar\Grammar;
 use Phiki\Phiki;
@@ -27,7 +29,19 @@ class Code
 
     public function getLanguage(): Grammar
     {
-        return Grammar::tryFrom($this->language) ?: Grammar::Php;
+        return Grammar::tryFrom($this->getLanguageShort()) ?: Grammar::Php;
+    }
+
+    public function getLanguageShort(): string
+    {
+        $constant = sprintf('%s::L%04d', CodeLanguage::class, $this->language);
+
+        if (defined($constant))
+        {
+            return constant($constant)->value;
+        }
+
+        return $this->language;
     }
 
     public function getOutput(): ?string
@@ -47,14 +61,17 @@ class Code
 
     public function getThemes(): array
     {
-        $themes = explode(',', $this->themes);
+        foreach ($themes = explode(',', $this->themes) as $key => $theme)
+        {
+            $themes[$key] = $this->getThemesShort($theme);
+        }
 
         if (count($themes) == 1)
         {
             return
             [
-                CodeMode::L->value => Theme::tryFrom($themes[0]) ?: CodeMode::settings()[0],
-                CodeMode::D->value => Theme::tryFrom($themes[0]) ?: CodeMode::settings()[1],
+                CodeMode::BASE->value => Theme::tryFrom($themes[0]) ?: CodeMode::settings()[0],
+                CodeMode::DARK->value => Theme::tryFrom($themes[0]) ?: CodeMode::settings()[1],
             ];
         }
 
@@ -62,12 +79,24 @@ class Code
         {
             return
             [
-                CodeMode::L->value => Theme::tryFrom($themes[0]) ?: CodeMode::settings()[0],
-                CodeMode::D->value => Theme::tryFrom($themes[1]) ?: CodeMode::settings()[1],
+                CodeMode::BASE->value => Theme::tryFrom($themes[0]) ?: CodeMode::settings()[0],
+                CodeMode::DARK->value => Theme::tryFrom($themes[1]) ?: CodeMode::settings()[1],
             ];
         }
 
         return CodeMode::settings();
+    }
+
+    public function getThemesShort($value): string
+    {
+        $constant = sprintf('%s::T%04d', CodeTheme::class, $value);
+
+        if (defined($constant))
+        {
+            return constant($constant)->value;
+        }
+
+        return $value;
     }
 
     public function getViewname(): ?string

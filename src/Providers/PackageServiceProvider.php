@@ -28,12 +28,12 @@ class PackageServiceProvider extends ServiceProvider
 
     private function bootComponents(): void
     {
+        Blade::anonymousComponentPath(__DIR__.'/../../resources/components', 'obsidian');
+
         if (file_exists(resource_path('views/obsidian')))
         {
             Blade::anonymousComponentPath(resource_path('views/obsidian'), 'obsidian');
         }
-
-        Blade::anonymousComponentPath(__DIR__.'/../../resources/components', 'obsidian');
     }
 
     private function bootDirectives(): void

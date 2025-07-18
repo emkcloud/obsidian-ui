@@ -9,11 +9,8 @@ enum DocsBoxStacked: string
     use EnumTrait;
 
     case STANDALONE = 'standalone';
-
     case TOP = 'top';
-
     case MIDDLE = 'middle';
-
     case BOTTOM = 'bottom';
 
     public static function default(): self

@@ -5,6 +5,10 @@ namespace Emkcloud\ObsidianUI\Helpers;
 use Emkcloud\ObsidianUI\Enums\CodeLanguage;
 use Emkcloud\ObsidianUI\Enums\CodeMode;
 use Emkcloud\ObsidianUI\Enums\CodeTheme;
+use Emkcloud\ObsidianUI\Facades\ObsidianUI;
+use Illuminate\Support\Facades\Config;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\Str;
 use Phiki\Grammar\Grammar;
 use Phiki\Phiki;
@@ -12,19 +16,35 @@ use Phiki\Theme\Theme;
 
 class Code
 {
-    private $filename;
+    private $content;
+
+    private $file;
+
+    private $gutter;
 
     private $language;
 
-    private $stream;
+    private $storage;
+
+    private $slot;
 
     private $themes;
 
-    private $viewname;
+    private $view;
 
-    public function getFilename(): ?string
+    public function getContent(): ?string
     {
-        return $this->filename;
+        return $this->content;
+    }
+
+    public function getFile(): ?string
+    {
+        return $this->file;
+    }
+
+    public function getGutter(): bool
+    {
+        return $this->gutter;
     }
 
     public function getLanguage(): Grammar
@@ -44,19 +64,47 @@ class Code
         return $this->language;
     }
 
-    public function getOutput(): ?string
+    public function getOutput(): string
     {
-        if ($this->getFilename() && file_exists($this->getFilename()))
-        {
-            return file_get_contents($this->getFilename());
-        }
-
-        return $this->getStream();
+        return $this->getOutputCode() ?: '';
     }
 
-    public function getStream(): ?string
+    public function getOutputCode(): ?string
     {
-        return $this->stream;
+        if ($this->getContent())
+        {
+            return $this->getContent();
+        }
+
+        if ($this->getStorage() && $this->getFile())
+        {
+            if (Config::has('filesystems.disks.'.$this->getStorage()))
+            {
+                return Storage::disk($this->getStorage())->get($this->getFile());
+            }
+        }
+
+        if (is_null($this->getStorage()) && $this->getFile() && file_exists($this->getFile()))
+        {
+            return file_get_contents($this->getFile());
+        }
+
+        if ($this->getView() && View::exists($this->getView()))
+        {
+            return view($this->getView())->render();
+        }
+
+        return $this->getSlot();
+    }
+
+    public function getStorage(): ?string
+    {
+        return $this->storage;
+    }
+
+    public function getSlot(): ?string
+    {
+        return $this->slot;
     }
 
     public function getThemes(): array
@@ -99,9 +147,9 @@ class Code
         return $value;
     }
 
-    public function getViewname(): ?string
+    public function getView(): ?string
     {
-        return $this->viewname;
+        return $this->view;
     }
 
     public function output(): ?string
@@ -110,12 +158,27 @@ class Code
             $this->getOutput(),
             $this->getLanguage(),
             $this->getThemes(),
+            $this->getGutter()
         );
     }
 
-    public function setFilename(?string $filename): self
+    public function setContent(?string $content): self
     {
-        $this->filename = Str::trim($filename);
+        $this->content = Str::trim($content);
+
+        return $this;
+    }
+
+    public function setFile(?string $file): self
+    {
+        $this->file = Str::trim($file);
+
+        return $this;
+    }
+
+    public function setGutter(?string $gutter): self
+    {
+        $this->gutter = ObsidianUI::isTrue($gutter);
 
         return $this;
     }
@@ -127,9 +190,16 @@ class Code
         return $this;
     }
 
-    public function setStream(?string $stream): self
+    public function setStorage(?string $storage): self
     {
-        $this->stream = $stream;
+        $this->storage = Str::trim($storage);
+
+        return $this;
+    }
+
+    public function setSlot(?string $slot): self
+    {
+        $this->slot = $slot;
 
         return $this;
     }
@@ -141,9 +211,9 @@ class Code
         return $this;
     }
 
-    public function setViewname(?string $viewname): self
+    public function setView(?string $view): self
     {
-        $this->viewname = Str::trim($viewname);
+        $this->view = Str::trim($view);
 
         return $this;
     }

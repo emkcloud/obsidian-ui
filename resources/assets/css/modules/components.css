@@ -1,0 +1,8 @@
+/* Design CSS for Documentation Code */
+
+[data-obsidian-ui-code][data-obsidian-ui-code-alternate="true"] pre code span.line:nth-of-type(even)
+{
+    @apply block;
+    @apply bg-[var(--obsidian-color-black)]/2!;
+    @apply dark:bg-[var(--obsidian-color-white)]/2!;
+}

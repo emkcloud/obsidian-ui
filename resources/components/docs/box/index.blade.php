@@ -14,7 +14,6 @@
 @php $classes = ObsidianUI::classes()
         ->add('[:where(&)]:relative')
         ->add('[:where(&)]:p-6')
-        ->add('[:where(&)]:overflow-auto2')
         ->add('[:where(&)]:border')
         ->add('[:where(&)]:rounded-2xl')
         ->add('[:where(&)]:border-black/10')
@@ -40,6 +39,7 @@
     DocsBoxHeight::SMALL->value => '[:where(&)]:max-h-48',
     DocsBoxHeight::MEDIUM->value => '[:where(&)]:max-h-86',
     DocsBoxHeight::LARGE->value => '[:where(&)]:max-h-140',
+    DocsBoxHeight::STANDARD->value => '[:where(&)]:max-h-none',
     default => '',
 
 })->add('[:where(&)]:overflow-auto');

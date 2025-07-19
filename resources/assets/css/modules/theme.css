@@ -1,6 +1,5 @@
 @theme
 {
-    --obsidian-color-base: var(--color-white);
     --obsidian-color-base-50: var(--color-neutral-50);
     --obsidian-color-base-100: var(--color-neutral-100);
     --obsidian-color-base-200: var(--color-neutral-200);
@@ -12,6 +11,10 @@
     --obsidian-color-base-800: var(--color-neutral-800);
     --obsidian-color-base-900: var(--color-neutral-900);
     --obsidian-color-base-950: var(--color-neutral-950);
+
+    --obsidian-color-base: var(--color-white);
+    --obsidian-color-black: var(--color-black);
+    --obsidian-color-white: var(--color-white);
 
     --obsidian-color-primary: var(--color-sky-500);
 }

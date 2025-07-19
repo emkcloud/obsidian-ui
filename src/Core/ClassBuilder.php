@@ -11,6 +11,8 @@ class ClassBuilder implements Stringable
 
     public function add($classes): self
     {
+        if (empty($classes)) return $this;
+
         $this->classes[] = Arr::toCssClasses($classes);
 
         return $this;

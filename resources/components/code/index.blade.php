@@ -2,12 +2,16 @@
 
 @props(
 [
+    'alternate' => false,
+    'clipboard' => true,
+    'content'   => null,
+    'file'      => null,
+    'language'  => config('obsidian-ui.code.language'),
+    'gutter'    => false,
+    'storage'   => null,
     'themes'    => config('obsidian-ui.code.themes.light').','.
                    config('obsidian-ui.code.themes.dark'),
-    'language'  => config('obsidian-ui.code.language'),
-    'filename'  => null,
     'viewname'  => null,
-    'clipboard' => true,
 ])
 
 {{-- normalize --}}
@@ -15,14 +19,30 @@
 @php $code = ObsidianUI::code()
         ->setLanguage($language)
         ->setThemes($themes)
-        ->setStream($slot)
-        ->setFilename($filename)
-        ->setViewname($viewname);
+        ->setSlot($slot)
+        ->setGutter($gutter)
+        ->setContent($content)
+        ->setFile($file)
+        ->setStorage($storage)
+        ->setView($viewname);
+@endphp
+
+{{-- attributes --}}
+
+@php $attrs = ObsidianUI::attributes(); 
+
+    ObsidianUI::isTrue($gutter)
+        ? $attrs->add('data-obsidian-ui-code-line-numbers','true')
+        : $attrs->add('data-obsidian-ui-code-line-numbers','false');
+
+    ObsidianUI::isTrue($alternate)
+        ? $attrs->add('data-obsidian-ui-code-alternate','true')
+        : $attrs->add('data-obsidian-ui-code-alternate','false');
 @endphp
 
 {{-- output --}}
 
-<div {{ $attributes }} data-obsidian-ui-code>
+<div data-obsidian-ui-code {{ $attributes->merge($attrs->toArray()) }}>
 
     <div x-data="obsidianui_code" class="relative">
 

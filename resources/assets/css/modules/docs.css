@@ -74,6 +74,19 @@
     @apply pb-2;
 }
 
+/* Design CSS for Documentation Code */
+
+[data-obsidian-ui-docs-section]
+[data-obsidian-ui-code] span.line-number
+{
+    @apply [:where(&)]:pr-4;
+    @apply [:where(&)]:mr-4;
+    @apply [:where(&)]:inline-block;
+    @apply [:where(&)]:border-r;
+    @apply [:where(&)]:text-[var(--obsidian-base-text-color)]!;
+    @apply [:where(&)]:border-[var(--obsidian-base-text-color)]/20;
+}
+
 /* Design CSS for Documentation Table */
 
 [data-obsidian-ui-docs-table] > table

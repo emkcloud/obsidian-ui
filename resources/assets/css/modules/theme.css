@@ -15,12 +15,8 @@
     --obsidian-color-base: var(--color-white);
     --obsidian-color-black: var(--color-black);
     --obsidian-color-white: var(--color-white);
-
     --obsidian-color-primary: var(--color-sky-600);
-    --obsidian-color-success: var(--color-green-600);
-    --obsidian-color-warning: var(--color-orange-600);
-    --obsidian-color-danger: var(--color-red-600);
-    --obsidian-color-info: var(--color-blue-600);
+    --obsidian-color-transparent: transparent;
 }
 
 @theme

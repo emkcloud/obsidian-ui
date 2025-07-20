@@ -1,4 +1,5 @@
 @use('Emkcloud\ObsidianUI\Enums\DocsBoxHeight')
+@use('Emkcloud\ObsidianUI\Enums\DocsBoxPadding')
 @use('Emkcloud\ObsidianUI\Enums\DocsBoxStacked')
 
 {{-- setting --}}
@@ -6,6 +7,7 @@
 @props(
 [
     'height'  => DocsBoxHeight::defaultValue(),
+    'padding' => DocsBoxPadding::defaultValue(),
     'stacked' => DocsBoxStacked::defaultValue(),
 ])
 
@@ -20,6 +22,18 @@
         ->add('[:where(&)]:dark:border-white/10');
 @endphp
 
+{{-- padding --}}
+
+@php $classes->add(match($padding)
+{
+    DocsBoxPadding::NONE->value => '[:where(&)]:p-0',
+    DocsBoxPadding::STANDARD->value => '[:where(&)]:p-6',
+    DocsBoxPadding::RELAXED->value => '[:where(&)]:p-10',
+    DocsBoxPadding::EXTENDED->value => '[:where(&)]:p-16',
+    default => '[:where(&)]:p-6',
+});
+@endphp
+
 {{-- stacked --}}
 
 @php $classes->add(match($stacked)
@@ -32,7 +46,7 @@
 });
 @endphp
 
-{{-- classes --}}
+{{-- container --}}
 
 @php $container = ObsidianUI::classes()->add(match($height)
 {

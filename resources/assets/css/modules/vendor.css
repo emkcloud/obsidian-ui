@@ -4,14 +4,43 @@ html.dark .phiki,
 html.dark .phiki span
 {
     color: var(--phiki-dark-color) !important;
-    background-color: var(--phiki-dark-background-color) !important;
     font-style: var(--phiki-dark-font-style) !important;
     font-weight: var(--phiki-dark-font-weight) !important;
     text-decoration: var(--phiki-dark-text-decoration) !important;
 }
 
+/* Design CSS for Syntax Highlighter */
+
+html.dark .phiki
+{
+    @apply bg-[var(--phiki-dark-background-color)]!;
+}
+
+/* Design CSS for Syntax Highlighter */
+
 html.dark [data-obsidian-ui-docs-section] .phiki,
 html.dark [data-obsidian-ui-docs-section] .phiki span
 {
     @apply bg-transparent!;
+}
+
+/* Design CSS for Syntax Highlighter */
+
+[data-obsidian-ui-code] span.line-number
+{
+    @apply [:where(&)]:pr-4;
+    @apply [:where(&)]:mr-4;
+    @apply [:where(&)]:inline-block;
+    @apply [:where(&)]:border-r;
+    @apply [:where(&)]:text-[var(--obsidian-text-color)]!;
+    @apply [:where(&)]:border-[var(--obsidian-text-color)]/20;
+}
+
+/* Design CSS for Syntax Highlighter */
+
+[data-obsidian-ui-code][data-obsidian-ui-code-alternate="true"] code > span.line:nth-of-type(even)
+{
+    @apply block;
+    @apply bg-[var(--obsidian-color-black)]/2!;
+    @apply dark:bg-[var(--obsidian-color-white)]/2!;
 }

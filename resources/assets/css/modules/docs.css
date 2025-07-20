@@ -16,7 +16,7 @@
 [data-obsidian-ui-docs-section] > h3
 {
     @apply [:where(&)]:font-semibold;
-    @apply [:where(&)]:text-[var(--obsidian-base-text-color-highlight)];
+    @apply [:where(&)]:text-[var(--obsidian-text-color-highlight)];
 }
 
 [data-obsidian-ui-docs-section] > h1
@@ -55,7 +55,7 @@
     @apply [:where(&)]:font-mono;
     @apply [:where(&)]:rounded-md;
     @apply [:where(&)]:align-middle;
-    @apply [:where(&)]:text-[var(--obsidian-base-text-color-highlight)];
+    @apply [:where(&)]:text-[var(--obsidian-text-color-highlight)];
     @apply [:where(&)]:bg-[var(--obsidian-color-base-100)];
     @apply dark:bg-[var(--obsidian-color-base-700)];
 }
@@ -72,19 +72,6 @@
 [data-obsidian-ui-docs-section] > ul > li
 {
     @apply pb-2;
-}
-
-/* Design CSS for Documentation Code */
-
-[data-obsidian-ui-docs-section]
-[data-obsidian-ui-code] span.line-number
-{
-    @apply [:where(&)]:pr-4;
-    @apply [:where(&)]:mr-4;
-    @apply [:where(&)]:inline-block;
-    @apply [:where(&)]:border-r;
-    @apply [:where(&)]:text-[var(--obsidian-base-text-color)]!;
-    @apply [:where(&)]:border-[var(--obsidian-base-text-color)]/20;
 }
 
 /* Design CSS for Documentation Table */
@@ -107,7 +94,7 @@
 
 [data-obsidian-ui-docs-table] > table th
 {
-    @apply [:where(&)]:text-[var(--obsidian-base-text-color-highlight)];
+    @apply [:where(&)]:text-[var(--obsidian-text-color-highlight)];
 }
 
 [data-obsidian-ui-docs-table] > table td:first-child,

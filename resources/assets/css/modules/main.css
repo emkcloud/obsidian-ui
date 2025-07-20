@@ -242,8 +242,8 @@
 
 [data-obsidian-ui-header][data-obsidian-ui-header-container="true"]
 {
-    @apply grid;    
-    @apply grid-cols-[var(--obsidian-grid-template-columns)];
+    @apply [:where(&)]:grid;    
+    @apply [:where(&)]:grid-cols-[var(--obsidian-grid-template-columns)];
 }
 
 [data-obsidian-ui-header][data-obsidian-ui-header-container="true"] > div

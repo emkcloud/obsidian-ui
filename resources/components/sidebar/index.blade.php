@@ -13,7 +13,7 @@
         ->add('[:where(&)]:py-8')
         ->add('[:where(&)]:px-6')
         ->add('[:where(&)]:overflow-y-auto')
-        ->add('[:where(&)]:text-[var(--obsidian-base-text-color)]');
+        ->add('[:where(&)]:text-[var(--obsidian-text-color)]');
 
     if (ObsidianUI::isTrue($sticky))
     {
@@ -25,7 +25,7 @@
     if (ObsidianUI::isTrue($border))
     {
         $classes->add('[:where(&)]:border-r');
-        $classes->add('[:where(&)]:border-[var(--obsidian-base-border-color)]')
+        $classes->add('[:where(&)]:border-[var(--obsidian-border-color)]')
             ->add('group-[&[data-obsidian-ui-sidebars=right]]/template:[:where(&)]:border-0')
             ->add('group-[&[data-obsidian-ui-sidebars=right]]/template:[:where(&)]:border-l')
             ->add('group-[&[data-obsidian-ui-sidebars=inverted]]/template:[:where(&)]:border-0')
@@ -34,7 +34,7 @@
 
     ObsidianUI::isTrue($transparent)
         ? $classes->add('[:where(&)]:bg-transparent')
-        : $classes->add('[:where(&)]:bg-[var(--obsidian-base-background-color)]');
+        : $classes->add('[:where(&)]:bg-[var(--obsidian-background-color)]');
 @endphp
 
 {{--

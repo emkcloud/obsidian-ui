@@ -27,7 +27,7 @@
         ->add('[:where(&)]:mb-6')
         ->add('[:where(&)]:text-xl')
         ->add('[:where(&)]:font-semibold')
-        ->add('[:where(&)]:text-[var(--obsidian-base-text-color-highlight)]');
+        ->add('[:where(&)]:text-[var(--obsidian-text-color-highlight)]');
 @endphp
 
 {{-- output --}}

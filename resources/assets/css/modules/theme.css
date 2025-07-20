@@ -16,24 +16,30 @@
     --obsidian-color-black: var(--color-black);
     --obsidian-color-white: var(--color-white);
 
-    --obsidian-color-primary: var(--color-sky-500);
+    --obsidian-color-primary: var(--color-sky-600);
+    --obsidian-color-success: var(--color-green-600);
+    --obsidian-color-warning: var(--color-orange-600);
+    --obsidian-color-danger: var(--color-red-600);
+    --obsidian-color-info: var(--color-blue-600);
 }
 
 @theme
 {
-    --obsidian-base-text-color: var(--obsidian-color-base-600);
-    --obsidian-base-text-color-highlight: var(--obsidian-color-base-900);
-    --obsidian-base-background-color: var(--obsidian-color-base);
-    --obsidian-base-border-color: var(--obsidian-color-base-200);
+    --obsidian-text-color: var(--obsidian-color-base-600);
+    --obsidian-text-color-highlight: var(--obsidian-color-base-900);
+    --obsidian-text-color-primary: var(--obsidian-color-base);
+    --obsidian-border-color: var(--obsidian-color-base-200);
+    --obsidian-background-color: var(--obsidian-color-base);
 }
 
 @layer theme
 {
     .dark
     {
-        --obsidian-base-text-color: var(--obsidian-color-base-200);
-        --obsidian-base-text-color-highlight: var(--obsidian-color-base);
-        --obsidian-base-background-color: var(--obsidian-color-base-900);
-        --obsidian-base-border-color: var(--obsidian-color-base-800);
+        --obsidian-text-color: var(--obsidian-color-base-200);
+        --obsidian-text-color-highlight: var(--obsidian-color-base);
+        --obsidian-text-color-primary: var(--obsidian-color-base);
+        --obsidian-border-color: var(--obsidian-color-base-800);
+        --obsidian-background-color: var(--obsidian-color-base-900);
     }
 }

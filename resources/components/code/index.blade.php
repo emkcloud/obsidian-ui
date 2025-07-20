@@ -27,6 +27,23 @@
         ->setView($viewname);
 @endphp
 
+{{-- classes --}}
+
+@php $classes = ObsidianUI::classes()
+    ->add('[:where(&)]:w-full')
+    ->add('[:where(&)]:max-h-[inherit]')
+    ->add('[:where(&)]:relative');
+@endphp
+
+{{-- classes --}}
+
+@php $codeclasses = ObsidianUI::classes()
+    ->add('[:where(&)]:w-full')
+    ->add('[:where(&)]:h-full')
+    ->add('[:where(&)]:max-h-[inherit]')
+    ->add('[:where(&)]:overflow-auto');
+@endphp
+
 {{-- attributes --}}
 
 @php $attrs = ObsidianUI::attributes(); 
@@ -42,9 +59,7 @@
 
 {{-- output --}}
 
-<div data-obsidian-ui-code {{ $attributes->merge($attrs->toArray()) }}>
-
-    <div x-data="obsidianui_code" class="relative">
+<div data-obsidian-ui-code {{ $attributes->class($classes)->merge($attrs->toArray()) }} x-data="obsidianui_code">
 
         @if (ObsidianUI::isTrue($clipboard))
 
@@ -66,8 +81,6 @@
 
         @endif
 
-        <div x-ref="code">{!! $code->output() !!}</div>
-
-    </div>
+        <div class="{{ $codeclasses }}" x-ref="code">{!! $code->output() !!}</div>
 
 </div>

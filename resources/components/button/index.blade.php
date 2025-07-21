@@ -2,21 +2,25 @@
 
 @props(
 [
-    'label'   => null,
-    'variant' => 'default',
-    'color'   => 'default',
+    'color' => null,
+    'icon' => null,
+    'iconClass' => null,
+    'iconTrailing' => null,
+    'label' => null,
+    'size' => null,
+    'rounded' => null,
+    'variant' => null,
 ])
 
 {{-- classes --}}
 
 @php $classes = ObsidianUI::classes()
-        ->add('[:where(&)]:px-6')
-        ->add('[:where(&)]:py-3')
+        ->add('[:where(&)]:align-bottom')
         ->add('[:where(&)]:relative')
         ->add('[:where(&)]:inline-flex')
         ->add('[:where(&)]:items-center')
-        ->add('[:where(&)]:justify-center')
-        ->add('[:where(&)]:text-sm')
+        ->add('[:where(&)]:justify-between')
+        ->add('[:where(&)]:space-x-2')
         ->add('[:where(&)]:font-medium')
         ->add('[:where(&)]:leading-none')
         ->add('[:where(&)]:whitespace-nowrap')
@@ -28,9 +32,17 @@
         ->add('[:where(&)]:disabled:pointer-events-none')
         ->add('[:where(&)]:disabled:opacity-70')
         ->add('[:where(&)]:dark:disabled:opacity-70');
+@endphp
 
-    $classes->add(config('obsidian-ui.button.rounded','rounded-full'));
+{{-- size --}}
 
+@php $classes->add(match($size) // BUTTON SIZE
+{
+    'xs'    => '[:where(&)]:text-xs [:where(&)]:px-3 [:where(&)]:h-6',
+    'sm'    => '[:where(&)]:text-sm [:where(&)]:px-3 [:where(&)]:h-8',
+    'lg'    => '[:where(&)]:text-lg [:where(&)]:px-6 [:where(&)]:h-12',
+    default => '[:where(&)]:text-sm [:where(&)]:px-4 [:where(&)]:h-10',
+});
 @endphp
 
 {{-- primary --}}
@@ -53,7 +65,7 @@
         'pink'    => '[--obsidian-button-primary-color:var(--color-pink-600)]',
         'purple'  => '[--obsidian-button-primary-color:var(--color-purple-500)]',
         'red'     => '[--obsidian-button-primary-color:var(--color-red-500)]',
-        'rose'    => '[--obsidian-button-primary-color:var(--color-rose-500)]',
+        'rose'    => '[--obsidian-button-primary-color:var(--color-rose-600)]',
         'sky'     => '[--obsidian-button-primary-color:var(--color-sky-600)]',
         'slate'   => '[--obsidian-button-primary-color:var(--color-slate-800)]',
         'stone'   => '[--obsidian-button-primary-color:var(--color-stone-800)]',
@@ -62,6 +74,33 @@
         'zinc'    => '[--obsidian-button-primary-color:var(--color-zinc-800)]',
         'yellow'  => '[--obsidian-button-primary-color:var(--color-yellow-400)]',
         default   => '[--obsidian-button-primary-color:var(--obsidian-color-primary)]',
+    });
+
+    $classes->add(match ($color) // PRIMARY COLOR HOVER
+    {
+        'amber'   => '[--obsidian-button-primary-color-hover:var(--color-amber-300)]',
+        'blue'    => '[--obsidian-button-primary-color-hover:var(--color-blue-400)]',
+        'cyan'    => '[--obsidian-button-primary-color-hover:var(--color-cyan-500)]',
+        'emerald' => '[--obsidian-button-primary-color-hover:var(--color-emerald-500)]',
+        'fuchsia' => '[--obsidian-button-primary-color-hover:var(--color-fuchsia-500)]',
+        'gray'    => '[--obsidian-button-primary-color-hover:var(--color-gray-700)]',
+        'green'   => '[--obsidian-button-primary-color-hover:var(--color-green-500)]',
+        'indigo'  => '[--obsidian-button-primary-color-hover:var(--color-indigo-400)]',
+        'lime'    => '[--obsidian-button-primary-color-hover:var(--color-lime-300)]',
+        'neutral' => '[--obsidian-button-primary-color-hover:var(--color-neutral-700)]',
+        'orange'  => '[--obsidian-button-primary-color-hover:var(--color-orange-400)]',
+        'pink'    => '[--obsidian-button-primary-color-hover:var(--color-pink-500)]',
+        'purple'  => '[--obsidian-button-primary-color-hover:var(--color-purple-400)]',
+        'red'     => '[--obsidian-button-primary-color-hover:var(--color-red-400)]',
+        'rose'    => '[--obsidian-button-primary-color-hover:var(--color-rose-500)]',
+        'sky'     => '[--obsidian-button-primary-color-hover:var(--color-sky-500)]',
+        'slate'   => '[--obsidian-button-primary-color-hover:var(--color-slate-700)]',
+        'stone'   => '[--obsidian-button-primary-color-hover:var(--color-stone-700)]',
+        'teal'    => '[--obsidian-button-primary-color-hover:var(--color-teal-500)]',
+        'violet'  => '[--obsidian-button-primary-color-hover:var(--color-violet-400)]',
+        'zinc'    => '[--obsidian-button-primary-color-hover:var(--color-zinc-700)]',
+        'yellow'  => '[--obsidian-button-primary-color-hover:var(--color-yellow-300)]',
+        default   => '[--obsidian-button-primary-color-hover:var(--obsidian-color-primary-hover)]',
     });
 
     $classes->add(match ($color) // PRIMARY TEXT COLOR
@@ -88,10 +127,12 @@
     });
 
     $classes->add('[:where(&)]:shadow-xs')
-        ->add('[:where(&)]:bg-[var(--obsidian-button-primary-color)]')
         ->add('[:where(&)]:border-[var(--obsidian-button-primary-color)]')
-        ->add('[:where(&)]:hover:bg-[color-mix(in_oklab,_var(--obsidian-button-primary-color),_transparent_10%)]')
-        ->add('[:where(&)]:dark:hover:bg-[color-mix(in_oklab,_var(--obsidian-button-primary-color),_transparent_10%)]');
+        ->add('[:where(&)]:hover:border-[var(--obsidian-button-primary-color-hover)]')
+        ->add('[:where(&)]:dark:hover:border-[var(--obsidian-button-primary-color-hover)]')
+        ->add('[:where(&)]:bg-[var(--obsidian-button-primary-color)]')
+        ->add('[:where(&)]:hover:bg-[var(--obsidian-button-primary-color-hover)]')
+        ->add('[:where(&)]:dark:hover:bg-[var(--obsidian-button-primary-color-hover)]');
 }
 @endphp
 
@@ -158,10 +199,16 @@
         'ghost'   => '[:where(&)]:text-[var(--obsidian-color-black)]',
         'info'    => '[:where(&)]:text-[var(--obsidian-color-white)]',
         'outline' => '[:where(&)]:text-[var(--obsidian-color-black)]',
-        'subtle'  => '[:where(&)]:text-[var(--obsidian-color-black)]',
+        'subtle'  => '[:where(&)]:text-[var(--obsidian-color-black)]/60',
         'success' => '[:where(&)]:text-[var(--obsidian-color-white)]',
         'warning' => '[:where(&)]:text-[var(--obsidian-color-white)]',
         default   => '[:where(&)]:text-[var(--obsidian-color-black)]',
+    });
+
+    $classes->add(match ($variant) // VARIANT TEXT HOVER
+    {
+        'subtle'  => '[:where(&)]:hover:text-[var(--obsidian-color-black)]',
+        default   => '[:where(&)]:hover:text-[var(--obsidian-color-black)]',
     });
 
     $classes->add(match ($variant) // VARIANT BORDER
@@ -197,10 +244,16 @@
         'ghost'   => '[:where(&)]:dark:text-[var(--obsidian-color-white)]',
         'info'    => '[:where(&)]:dark:text-[var(--obsidian-color-white)]',
         'outline' => '[:where(&)]:dark:text-[var(--obsidian-color-white)]',
-        'subtle'  => '[:where(&)]:dark:text-[var(--obsidian-color-white)]',
+        'subtle'  => '[:where(&)]:dark:text-[var(--obsidian-color-white)]/60',
         'success' => '[:where(&)]:dark:text-[var(--obsidian-color-white)]',
         'warning' => '[:where(&)]:dark:text-[var(--obsidian-color-white)]',
         default   => '[:where(&)]:dark:text-[var(--obsidian-color-white)]',
+    });
+
+    $classes->add(match ($variant) // VARIANT DARK TEXT HOVER
+    {
+        'subtle'  => '[:where(&)]:dark:hover:text-[var(--obsidian-color-white)]',
+        default   => '[:where(&)]:dark:hover:text-[var(--obsidian-color-white)]',
     });
 
     $classes->add(match ($variant) // VARIANT DARK BORDER
@@ -250,8 +303,51 @@
 }
 @endphp
 
+{{-- rounded --}}
+
+@php $classes->add(match($rounded) // BUTTON ROUNDED
+{
+    'sm'    => '[:where(&)]:rounded-sm',
+    'lg'    => '[:where(&)]:rounded-lg',
+    'xl'    => '[:where(&)]:rounded-xl',
+    'none'  => '[:where(&)]:rounded-none',
+    default => config('obsidian-ui.button.rounded','rounded-full'),
+});
+@endphp
+
+{{-- icons --}}
+
+@php $icons = ObsidianUI::classes()->add(match($size)
+{
+    'xs'    => 'size-3',
+    'sm'    => 'size-3.5',
+    'lg'    => 'size-5',
+    default => 'size-4',
+
+})->add($iconClass);
+
+@endphp
+
+{{-- content --}}
+
+@php $content = Str::trim($label) ?: Str::trim($slot); @endphp
+
+{{-- exceptions --}}
+
+@php $elements = 0;
+
+    if ($icon         ) $elements += 1;
+    if ($iconTrailing ) $elements += 1;
+    if ($content      ) $elements += 2;
+
+    if ($elements == 1) $classes->add('aspect-square px-0 justify-center');
+
+@endphp
+
 {{-- output --}}
 
-<button {{ $attributes->class($classes) }}>
-    @empty($label) {{ $slot }} @else {{ $label }} @endempty
+<button type="button" {{ $attributes->class($classes) }} data-obsidian-ui-button>
+    @if ($icon) <x-obsidian::icon name="{{ $icon }}" class="{{ $icons }}"/> @endif
+    @if ($content) <span class="flex-1">{{ $content }}</span> @endif
+    @if ($iconTrailing) <x-obsidian::icon name="{{ $iconTrailing }}" class="{{ $icons }}"/> @endif
 </button>

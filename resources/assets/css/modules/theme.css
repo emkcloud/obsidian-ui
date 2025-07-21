@@ -16,6 +16,7 @@
     --obsidian-color-black: var(--color-black);
     --obsidian-color-white: var(--color-white);
     --obsidian-color-primary: var(--color-sky-600);
+    --obsidian-color-primary-hover: var(--color-sky-500);
     --obsidian-color-transparent: transparent;
 }
 

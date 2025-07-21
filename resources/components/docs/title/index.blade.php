@@ -45,6 +45,9 @@
 
 {{-- output --}}
 
-<{{ $heading }} {{ $attributes->class($classes) }} data-obsidian-ui-docs-title>
-    {{ $slot }}
-</{{ $heading }}>
+<{{ $heading }} {{ $attributes->class($classes) }}
+
+    data-obsidian-ui-docs-title
+    data-obsidian-ui-docs-title-main="{{ ObsidianUI::boolean($main) }}"
+
+>{{ $slot }}</{{ $heading }}>

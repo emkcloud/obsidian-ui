@@ -25,6 +25,10 @@
 
 {{-- output --}}
 
-<footer {{ $attributes->class($classes) }} data-obsidian-ui-footer>
-    {{ $slot }}
-</footer>
+<footer {{ $attributes->class($classes) }} 
+
+    data-obsidian-ui-footer
+    data-obsidian-ui-footer-border="{{ ObsidianUI::boolean($border) }}"
+    data-obsidian-ui-footer-transparent="{{ ObsidianUI::boolean($transparent) }}"
+
+>{{ $slot }}</footer>

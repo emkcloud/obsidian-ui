@@ -1,9 +1,10 @@
 {{-- classes --}}
 
-@php
-    $classes = ObsidianUI::classes('flex flex-col');
+@php $classes = ObsidianUI::classes()
+        ->add('[:where(&)]:flex')
+        ->add('[:where(&)]:flex-col');
 @endphp
 
 {{-- output --}}
 
-<nav data-obsidian-ui-navlist {{ $attributes->class($classes) }}>{{ $slot }}</nav>
+<nav {{ $attributes->class($classes) }} data-obsidian-ui-navlist>{{ $slot }}</nav>

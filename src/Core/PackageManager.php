@@ -15,6 +15,11 @@ class PackageManager
         return AssetManager::appearance($options);
     }
 
+    public function boolean(mixed $value): string
+    {
+        return $this->isTrue($value) ? 'true' : 'false';
+    }
+
     public function attributes(?string $name = null, ?string $value = null): AttributeBuilder
     {
         $builder = new AttributeBuilder;

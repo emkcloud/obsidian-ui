@@ -1,4 +1,5 @@
 @import './modules/theme.css';
 @import './modules/main.css';
+@import './modules/components.css';
 @import './modules/docs.css';
 @import './modules/vendor.css';

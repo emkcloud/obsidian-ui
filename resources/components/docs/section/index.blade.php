@@ -25,10 +25,10 @@
 <div id="{{ $name }}" {{ $attributes->class($classes) }}
 
     data-obsidian-ui-docs-section
-    data-main="{{ $main }}"
-    data-name="{{ $name }}"
-    data-title="{{ $title }}"
-    data-label="{{ $label }}"
+    data-obsidian-ui-docs-section-main="{{ $main }}"
+    data-obsidian-ui-docs-section-name="{{ $name }}"
+    data-obsidian-ui-docs-section-title="{{ $title }}"
+    data-obsidian-ui-docs-section-label="{{ $label }}"
 >
     @if ($title)
         <x-obsidian::docs.title 

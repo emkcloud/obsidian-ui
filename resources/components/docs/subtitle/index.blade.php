@@ -32,6 +32,8 @@
 
 {{-- output --}}
 
-<h3 id="{{ $name }}" {{ $attributes->class($classes) }} data-obsidian-ui-docs-subtitle>
-    {{ $title }}{{ $slot }}
-</h3>
+<h3 id="{{ $name }}" {{ $attributes->class($classes) }} 
+
+    data-obsidian-ui-docs-subtitle
+
+>{{ $title }}{{ $slot }}</h3>

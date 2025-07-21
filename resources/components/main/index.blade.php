@@ -26,6 +26,10 @@
 
 {{-- output --}}
 
-<main {{ $attributes->class($classes) }} data-obsidian-ui-main>
-    {{ $slot }}
-</main>
+<main {{ $attributes->class($classes) }} 
+
+    data-obsidian-ui-main
+    data-obsidian-ui-main-border="{{ ObsidianUI::boolean($border) }}"
+    data-obsidian-ui-main-transparent="{{ ObsidianUI::boolean($transparent) }}"
+
+>{{ $slot }}</main>

@@ -5,13 +5,9 @@
 {{-- classes --}}
 
 @php
-
     $classes = ObsidianUI::classes('flex flex-col mt-4 first:mt-0');
-
     $headcss = ObsidianUI::classes('mb-3 font-semibold');
-
     $slotcss = ObsidianUI::classes('group is-group flex flex-col');
-
 @endphp
 
 {{-- output --}}

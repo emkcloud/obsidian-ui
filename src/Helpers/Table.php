@@ -135,7 +135,7 @@ class Table
     {
         return preg_replace_callback('/(?<!\S)\*([^\s*][^*\n]*[^\s*])\*(?!\S)/', function ($matches)
         {
-            return sprintf('<span class="primary">%s</span>', Str::trim($matches[1]));
+            return sprintf('<span class="primary whitespace-nowrap">%s</span>', Str::trim($matches[1]));
 
         }, $value);
     }

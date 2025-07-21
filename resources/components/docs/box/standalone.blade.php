@@ -4,6 +4,4 @@
 
 {{-- output --}}
 
-<x-obsidian::docs.box stacked="standalone" {{ $attributes }}>
-    {{ $slot }}
-</x-obsidian::docs.box>
+<x-obsidian::docs.box stacked="standalone" {{ $attributes }}>{{ $slot }}</x-obsidian::docs.box>

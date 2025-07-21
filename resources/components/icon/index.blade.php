@@ -8,8 +8,12 @@
 
 {{-- setting --}}
 
-@php $icon = sprintf('obsidian::icon.%s.%s',$set,$name); @endphp
+@php $component = ObsidianUI::icon()
+        ->setIcon($set)
+        ->setName($name)
+        ->component();
+@endphp
 
 {{-- output --}}
 
-<x-dynamic-component :component="$icon" {{ $attributes }}/>
+<x-dynamic-component :component="$component" {{ $attributes }}/>

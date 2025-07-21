@@ -1,0 +1,16 @@
+/* Design CSS for Button Group */
+
+[Adata-obsidian-ui-button-group] > [data-obsidian-ui-button]:first-child:not(:last-child)
+{
+    @apply [:where(&)]:rounded-r-none;
+}
+
+[Adata-obsidian-ui-button-group] > [data-obsidian-ui-button]:not(:first-child):not(:last-child)
+{
+    @apply [:where(&)]:rounded-none;
+}
+
+[Adata-obsidian-ui-button-group] > [data-obsidian-ui-button]:not(:first-child):last-child
+{
+    @apply [:where(&)]:rounded-l-none;
+}

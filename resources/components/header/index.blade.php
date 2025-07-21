@@ -44,6 +44,12 @@
 
 {{-- output --}}
 
-<header x-data="obsidianui_header" {{ $attributes->class($classes)->merge($attrs->toArray()) }} data-obsidian-ui-header>
-    {{ $slot }}
-</header>
+<header {{ $attributes->class($classes)->merge($attrs->toArray()) }} x-data="obsidianui_header"
+
+    data-obsidian-ui-header
+    data-obsidian-ui-header-sticky="{{ ObsidianUI::boolean($sticky) }}"
+    data-obsidian-ui-header-border="{{ ObsidianUI::boolean($border) }}"
+    data-obsidian-ui-header-container="{{ ObsidianUI::boolean($container) }}"
+    data-obsidian-ui-header-transparent="{{ ObsidianUI::boolean($transparent) }}"
+
+>{{ $slot }}</header>

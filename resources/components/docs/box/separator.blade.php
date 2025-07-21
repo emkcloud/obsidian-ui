@@ -8,4 +8,4 @@
 
 {{-- output --}}
 
-<div {{ $attributes->class($classes) }}></div>
+<div {{ $attributes->class($classes) }} data-obsidian-ui-docs-box-separator></div>

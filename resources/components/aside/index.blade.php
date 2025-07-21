@@ -39,6 +39,11 @@
 
 {{-- output --}}
 
-<aside {{ $attributes->class($classes) }} data-obsidian-ui-aside>
-    {{ $slot }}
-</aside>
+<aside {{ $attributes->class($classes) }}
+
+    data-obsidian-ui-aside
+    data-obsidian-ui-aside-sticky="{{ ObsidianUI::boolean($sticky) }}"
+    data-obsidian-ui-aside-border="{{ ObsidianUI::boolean($border) }}"
+    data-obsidian-ui-aside-transparent="{{ ObsidianUI::boolean($transparent) }}"
+
+>{{ $slot }}</aside>
